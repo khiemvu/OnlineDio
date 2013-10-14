@@ -26,7 +26,7 @@
                 android:id="@+id/login_btLogin" android:layout_alignParentRight="true"
                 android:background="@drawable/lg_button_lg2x"
                 android:textColor="#ffffff" android:textStyle="bold" android:textSize="18dp"
-                android:layout_margin="3dp" android:clickable="false" android:enabled="true"/>
+                android:layout_margin="3dp" android:clickable="false" android:enabled="false"/>
     </RelativeLayout>
     <RelativeLayout
             android:layout_width="fill_parent"
@@ -44,7 +44,8 @@
                 android:id="@+id/etPass" android:layout_alignParentLeft="true" android:layout_marginLeft="60dp"
                 android:layout_alignParentTop="true" android:layout_marginTop="65dp" android:textSize="30dp"
                 android:textColor="#5b5b5b" android:typeface="sans" android:hint="Password"
-                android:layout_marginRight="10dp"/>
+                android:inputType="textPassword"
+                android:layout_marginRight="10dp" android:password="false"/>
     </RelativeLayout>
     <TextView
             android:layout_width="wrap_content"

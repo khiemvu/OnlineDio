@@ -12,6 +12,7 @@ public class HomeActivity extends Activity
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
-        super.onCreate(savedInstanceState);    //To change body of overridden methods use File | Settings | File Templates.
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.home);
     }
 }
