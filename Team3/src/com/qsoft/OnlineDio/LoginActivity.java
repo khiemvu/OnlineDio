@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -86,7 +87,28 @@ public class LoginActivity extends Activity
                     }
                     break;
                 case R.id.tvResetPass:
-                    //Todo reset
+                    AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
+                    builder.setTitle("Forgot Password");
+                    LayoutInflater inflater = LoginActivity.this.getLayoutInflater();
+                    builder.setView(inflater.inflate(R.layout.dialog_password, null))
+                            .setPositiveButton(R.string.reset, new DialogInterface.OnClickListener()
+                            {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which)
+                                {
+                                    //TODO sent password again
+                                }
+                            });
+                    builder.setView(inflater.inflate(R.layout.dialog_password, null))
+                            .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener()
+                            {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which)
+                                {
+                                    //To change body of implemented methods use File | Settings | File Templates.
+                                }
+                            });
+                    builder.show();
                     break;
             }
         }

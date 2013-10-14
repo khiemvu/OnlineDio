@@ -14,4 +14,10 @@
     </string>
     <string name="home">Home</string>
     <string name="OK">OK</string>
+    <string name="message">To reset your password, please
+        \n
+        enter your email address
+    </string>
+    <string name="reset">Reset</string>
+    <string name="cancel">Cancel</string>
 </resources>
