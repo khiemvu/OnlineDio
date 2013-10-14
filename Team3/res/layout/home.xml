@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp" android:background="@drawable/nav_bar">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home"
+                android:id="@+id/tvTitle" android:layout_centerHorizontal="true" android:layout_alignParentTop="true"
+                android:textColor="#ffffff" android:textSize="20dp" android:textStyle="bold" android:typeface="sans"
+                android:layout_margin="8dp"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:id="@+id/btNavigate" android:layout_alignParentLeft="true"
+                android:background="@drawable/my_favorite_btn_option2x" android:layout_margin="3dp"
+                android:singleLine="false"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btGlobal"
+
+                android:background="@drawable/home_button_notification2x"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="false" android:layout_margin="3dp"/>
+    </RelativeLayout>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Content feeds"
+            android:id="@+id/textView" android:textColor="@android:color/white" android:textSize="24dp"
+            android:textStyle="bold" android:typeface="sans" android:layout_marginLeft="20dp"/>
+    <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView"/>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:background="#f6f6f6" android:id="@+id/relativeLayout">
+        <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center"
+                     android:layout_centerHorizontal="true" android:id="@+id/ibtRecord"
+                     android:layout_alignParentBottom="true" android:background="@drawable/home_button_recorder4"/>
+    </RelativeLayout>
+</LinearLayout>

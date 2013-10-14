@@ -52,7 +52,7 @@
     <Button
             android:layout_width="64dp"
             android:layout_height="wrap_content"
-            android:id="@+id/btLogin"
+            android:id="@+id/launch_btLogin"
             android:layout_toRightOf="@+id/btLoginFB"
             android:layout_alignTop="@+id/btSignUp"
             android:background="@drawable/fl_btn_login"

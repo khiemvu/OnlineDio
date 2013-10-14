@@ -15,19 +15,22 @@ import android.widget.Button;
  */
 public class FirstLaunchActivity extends Activity
 {
+    private Button launch_btLogin;
+
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.first_launch);
-        Button btLogin = (Button) findViewById(R.id.btLogin);
-        btLogin.setOnClickListener(new View.OnClickListener()
+        launch_btLogin = (Button) findViewById(R.id.launch_btLogin);
+        launch_btLogin.setOnClickListener(new View.OnClickListener()
         {
             @Override
-            public void onClick(View view)
+            public void onClick(View v)
             {
                 Intent intent = new Intent(FirstLaunchActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });
+
     }
 }
