@@ -5,7 +5,7 @@
               android:background="#eeeeee" android:orientation="vertical">
     <RelativeLayout
             android:layout_width="fill_parent"
-            android:layout_height="30dp" android:background="#fbbf06">
+            android:layout_height="30dp" android:background="@drawable/nav_bar">
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -16,32 +16,40 @@
         <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageButton" android:layout_alignParentRight="true"
-                android:layout_alignTop="@+id/textView" android:background="@drawable/next"/>
-        <ImageButton
+                android:id="@+id/imageButton1" android:layout_alignParentLeft="true"
+                android:layout_alignBottom="@+id/imageButton" android:background="@drawable/back"
+                />
+        <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageButton1" android:layout_alignParentLeft="true"
-                android:layout_alignBottom="@+id/imageButton" android:background="@drawable/back"/>
+                android:text="Done"
+                android:id="@+id/btLogin" android:layout_alignParentRight="true"
+                android:layout_alignBottom="@+id/imageButton1" android:background="@drawable/lg_button_lg2x"
+                android:textColor="#ffffff" android:textStyle="bold" android:textSize="18dp"
+                android:layout_margin="3dp"/>
     </RelativeLayout>
     <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content" android:background="@drawable/background">
         <EditText
-                android:layout_width="192dp"
+                android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/email"
                 android:id="@+id/etName" android:layout_alignParentLeft="true" android:layout_marginLeft="45dp"
                 android:layout_alignParentTop="true" android:layout_marginTop="10dp" android:textSize="30dp"
                 android:textColor="#5b5b5b" android:typeface="sans"/>
         <EditText
-                android:layout_width="198dp"
+                android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/password"
-
                 android:id="@+id/etPass" android:layout_alignParentLeft="true" android:layout_marginLeft="45dp"
                 android:layout_alignParentTop="true" android:layout_marginTop="68dp" android:textSize="30dp"
                 android:textColor="#5b5b5b" android:typeface="sans"/>
     </RelativeLayout>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reset_pass"
+            android:id="@+id/tvNotify" android:singleLine="false" android:layout_gravity="center"/>
 </LinearLayout>
 
