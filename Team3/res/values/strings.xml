@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">OnlineDio</string>
+    <string name="dialog_message">aaa</string>
+    <string name="dialog_title">bbb</string>
+    <string name="ok">ok</string>
+    <string name="cancel">cancel</string>
+    <string name="fl_text1">ONE PICTURE SAYS A THOUSAND WORD</string>
+    <string name="fl_text2">WHAT IF ONE CLIP CAN SAY YOU</string>
+    <string name="fl_text3">By joining OnlineDIO you agree to the
+        <b>Terms of Service</b>
+        \n
+        and
+        <b>Privacy Policy</b>
+    </string>
     <string name="reset_pass">
         <u>I forgot my password</u>
     </string>
+
 </resources>

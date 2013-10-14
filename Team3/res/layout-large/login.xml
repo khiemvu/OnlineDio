@@ -30,7 +30,7 @@
     </RelativeLayout>
     <RelativeLayout
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" android:background="@drawable/background">
+            android:layout_height="wrap_content" android:background="@drawable/fl_background">
         <EditText
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"

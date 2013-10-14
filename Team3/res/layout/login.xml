@@ -30,16 +30,16 @@
     </RelativeLayout>
     <RelativeLayout
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" android:background="@drawable/background">
+            android:layout_height="wrap_content" android:background="@drawable/fl_background">
         <EditText
-                android:layout_width="280dp"
+                android:layout_width="240dp"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/email"
                 android:id="@+id/etName" android:layout_alignParentLeft="true" android:layout_marginLeft="45dp"
                 android:layout_alignParentTop="true" android:layout_marginTop="10dp" android:textSize="30dp"
                 android:textColor="#5b5b5b" android:typeface="sans"/>
         <EditText
-                android:layout_width="280dp"
+                android:layout_width="240dp"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/password"
                 android:id="@+id/etPass" android:layout_alignParentLeft="true" android:layout_marginLeft="45dp"
