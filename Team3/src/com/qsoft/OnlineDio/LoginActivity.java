@@ -3,7 +3,7 @@ package com.qsoft.OnlineDio;
 import android.app.Activity;
 import android.os.Bundle;
 
-public class OnlineDio extends Activity
+public class LoginActivity extends Activity
 {
     /**
      * Called when the activity is first created.
