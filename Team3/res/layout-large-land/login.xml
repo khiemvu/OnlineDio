@@ -22,50 +22,31 @@
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="Done"
                 android:id="@+id/login_btLogin" android:layout_alignParentRight="true"
+                android:background="@drawable/lg_button_lg2x"
                 android:textColor="#ffffff" android:textStyle="bold" android:textSize="18dp"
-                android:layout_margin="3dp" android:clickable="false" android:enabled="false"
-                android:background="@drawable/login_bt_normal"/>
+                android:layout_margin="3dp" android:clickable="false" android:enabled="false"/>
     </RelativeLayout>
     <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content" android:background="@drawable/lg_login_acc_pass2x"
             android:layout_marginTop="10dp">
         <EditText
-                android:layout_width="396dp"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/etEmail" android:layout_alignParentLeft="true" android:layout_marginLeft="60dp"
+                android:id="@+id/etEmail" android:layout_alignParentLeft="true" android:layout_marginLeft="210dp"
                 android:layout_alignParentTop="true" android:layout_marginTop="4dp" android:textSize="30dp"
                 android:textColor="#5b5b5b" android:typeface="sans" android:hint="Email"
                 android:layout_marginRight="10dp"/>
-        <ImageButton
-                android:id="@+id/ibtDelEmail"
-                android:padding="5dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/etEmail"
-                android:layout_alignBottom="@+id/etEmail"
-                android:layout_alignRight="@+id/etEmail"
-                android:src="@drawable/login_delete_text" android:background="#ffffff"
-                android:layout_margin="8dp" android:visibility="invisible"/>
         <EditText
-                android:layout_width="396dp"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/etPass" android:layout_alignParentLeft="true" android:layout_marginLeft="60dp"
-                android:layout_alignParentTop="true" android:layout_marginTop="64dp" android:textSize="30dp"
+                android:id="@+id/etPass" android:layout_alignParentLeft="true" android:layout_marginLeft="210dp"
+                android:layout_alignParentTop="true" android:layout_marginTop="65dp" android:textSize="30dp"
                 android:textColor="#5b5b5b" android:typeface="sans" android:hint="Password"
                 android:inputType="textPassword"
                 android:layout_marginRight="10dp" android:password="false"/>
-        <ImageButton
-                android:id="@+id/ibtDelPass"
-                android:padding="5dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/etPass"
-                android:layout_alignBottom="@+id/etPass"
-                android:layout_alignRight="@+id/etPass"
-                android:src="@drawable/login_delete_text" android:visibility="invisible" android:background="#ffffff"
-                android:layout_margin="8dp"/>
     </RelativeLayout>
     <TextView
             android:layout_width="wrap_content"

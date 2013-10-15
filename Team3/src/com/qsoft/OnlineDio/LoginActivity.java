@@ -6,10 +6,13 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import com.qsoft.Validate.Constant;
 import com.qsoft.Validate.EmailFormatValidator;
@@ -25,6 +28,8 @@ public class LoginActivity extends Activity
     private TextView tvResetPas;
     private EditText etEmail;
     private EditText etPass;
+    private ImageButton ibtDelEmail;
+    private ImageButton ibtDelPass;
     private String email;
     private String pass;
 
@@ -36,22 +41,94 @@ public class LoginActivity extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
-        findComponent();
+        initComponent();
 
         btBack.setOnClickListener(onclickListener);
         btLogin.setOnClickListener(onclickListener);
         tvResetPas.setOnClickListener(onclickListener);
-
+        ibtDelEmail.setOnClickListener(onclickListener);
+        ibtDelPass.setOnClickListener(onclickListener);
+        etEmail.addTextChangedListener(textChangeListener);
+        etPass.addTextChangedListener(textChangeListener);
         getEmailAndPassword();
     }
 
-    private void findComponent()
+    private final TextWatcher textChangeListener = new TextWatcher()
+    {
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before,
+                                  int count)
+        {
+            if (!etEmail.getText().toString().isEmpty())
+            {
+                ibtDelEmail.setVisibility(View.VISIBLE);
+                ibtDelPass.setVisibility(View.INVISIBLE);
+            }
+            if (!etPass.getText().toString().isEmpty())
+            {
+                ibtDelPass.setVisibility(View.VISIBLE);
+                ibtDelEmail.setVisibility(View.INVISIBLE);
+            }
+
+            if (!etEmail.getText().toString().isEmpty() && !etPass.getText().toString().isEmpty())
+            {
+                btLogin.setBackgroundDrawable(getResources().getDrawable(R.drawable.login_bt_active));
+            }
+            else
+            {
+                btLogin.setBackgroundDrawable(getResources().getDrawable(R.drawable.login_bt_normal));
+            }
+        }
+
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count,
+                                      int after)
+        {
+        }
+
+        @Override
+        public void afterTextChanged(Editable s)
+        {
+            etEmail.setOnFocusChangeListener(new View.OnFocusChangeListener()
+            {
+                public void onFocusChange(View v, boolean hasFocus)
+                {
+                    if (hasFocus && !etEmail.getText().toString().isEmpty())
+                    {
+                        ibtDelEmail.setVisibility(View.VISIBLE);
+                    }
+                    else
+                    {
+                        ibtDelEmail.setVisibility(View.INVISIBLE);
+                    }
+                }
+            });
+            etPass.setOnFocusChangeListener(new View.OnFocusChangeListener()
+            {
+                public void onFocusChange(View v, boolean hasFocus)
+                {
+                    if (hasFocus && !etPass.getText().toString().isEmpty())
+                    {
+                        ibtDelPass.setVisibility(View.VISIBLE);
+                    }
+                    else
+                    {
+                        ibtDelPass.setVisibility(View.INVISIBLE);
+                    }
+                }
+            });
+        }
+    };
+
+    private void initComponent()
     {
         etEmail = (EditText) findViewById(R.id.etEmail);
         etPass = (EditText) findViewById(R.id.etPass);
         btBack = (Button) findViewById(R.id.btBack);
         btLogin = (Button) findViewById(R.id.login_btLogin);
         tvResetPas = (TextView) findViewById(R.id.tvResetPass);
+        ibtDelEmail = (ImageButton) findViewById(R.id.ibtDelEmail);
+        ibtDelPass = (ImageButton) findViewById(R.id.ibtDelPass);
     }
 
     private void getEmailAndPassword()
@@ -88,6 +165,12 @@ public class LoginActivity extends Activity
                     break;
                 case R.id.tvResetPass:
                     resetPassWord();
+                    break;
+                case R.id.ibtDelEmail:
+                    etEmail.setText("");
+                    break;
+                case R.id.ibtDelPass:
+                    etPass.setText("");
                     break;
             }
         }
@@ -175,5 +258,4 @@ public class LoginActivity extends Activity
             etPass.setText(Constant.PASSWORD.getValue());
         }
     }
-
 }
