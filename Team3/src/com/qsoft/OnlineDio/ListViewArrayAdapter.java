@@ -15,16 +15,19 @@ import java.util.List;
  * User: Khiemvx
  * Date: 10/14/13
  */
-public class ListViewArrayAdapter extends ArrayAdapter<RowsInfo> {
+public class ListViewArrayAdapter extends ArrayAdapter<RowsInfo>
+{
     private Context context;
 
-    public ListViewArrayAdapter(Context context, int resourceID, List<RowsInfo> objects) {
+    public ListViewArrayAdapter(Context context, int resourceID, List<RowsInfo> objects)
+    {
         super(context, resourceID, objects);
         this.context = context;
     }
 
     /*private view holder class*/
-    private class ViewHolder {
+    private class ViewHolder
+    {
         ImageView ivAvatar;
         TextView tvTitle;
         TextView tvName;
@@ -33,13 +36,15 @@ public class ListViewArrayAdapter extends ArrayAdapter<RowsInfo> {
         TextView tvTime;
     }
 
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, ViewGroup parent)
+    {
         ViewHolder holder = null;
         RowsInfo rowItem = getItem(position);
 
         LayoutInflater mInflater = (LayoutInflater) context
                 .getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
-        if (convertView == null) {
+        if (convertView == null)
+        {
             convertView = mInflater.inflate(R.layout.items_detail, null);
             holder = new ViewHolder();
 
@@ -51,8 +56,11 @@ public class ListViewArrayAdapter extends ArrayAdapter<RowsInfo> {
             holder.tvTime = (TextView) convertView.findViewById(R.id.tvTime);
 
             convertView.setTag(holder);
-        } else
+        }
+        else
+        {
             holder = (ViewHolder) convertView.getTag();
+        }
 
         holder.ivAvatar.setImageResource(rowItem.getIdImage());
         holder.tvTitle.setText(rowItem.getTitle());

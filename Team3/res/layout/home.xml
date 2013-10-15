@@ -35,15 +35,16 @@
             android:text="Content feeds"
             android:id="@+id/textView" android:textColor="@android:color/white" android:textSize="24dp"
             android:textStyle="bold" android:typeface="sans" android:layout_marginLeft="20dp"/>
-    <ListView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/home_lvDetail" android:background="#f6f6f6"/>
     <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content"
                     android:background="#f6f6f6" android:id="@+id/relativeLayout"
                     android:layout_alignParentBottom="true" android:layout_gravity="center_horizontal">
+        <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/home_lvDetail" android:background="#f6f6f6"/>
         <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center"
                      android:layout_centerHorizontal="true" android:id="@+id/ibtRecord"
-                     android:layout_alignParentBottom="true" android:background="@drawable/home_button_recorder4"/>
+                     android:layout_alignParentBottom="true" android:background="@drawable/home_button_recorder"
+                     android:layout_alignRight="@+id/home_lvDetail" android:layout_alignLeft="@+id/home_lvDetail"/>
     </RelativeLayout>
 </LinearLayout>

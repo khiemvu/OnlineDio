@@ -1,6 +1,5 @@
-package com.qsoft.OnlineDio;
+package com.qsoft.Validate;
 
-import java.lang.String;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
