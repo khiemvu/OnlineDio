@@ -10,10 +10,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class LoginActivity extends Activity
-{
-    EmailFormatValidator emailFormatValidator = new EmailFormatValidator();
+public class LoginActivity extends Activity {
+    public static final String EMAIL = "test@gmail.com";
+    public static final String PASSWORD = "123456";
 
+    EmailFormatValidator emailFormatValidator = new EmailFormatValidator();
     private Button btLogin;
     private Button btBack;
     private TextView tvResetPas;
@@ -23,8 +24,7 @@ public class LoginActivity extends Activity
     private String pass;
 
     @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
         findComponent();
@@ -36,8 +36,7 @@ public class LoginActivity extends Activity
         getEmailAndPassword();
     }
 
-    private void findComponent()
-    {
+    private void findComponent() {
         etEmail = (EditText) findViewById(R.id.etEmail);
         etPass = (EditText) findViewById(R.id.etPass);
         btBack = (Button) findViewById(R.id.btBack);
@@ -45,24 +44,19 @@ public class LoginActivity extends Activity
         tvResetPas = (TextView) findViewById(R.id.tvResetPass);
     }
 
-    private void getEmailAndPassword()
-    {
+    private void getEmailAndPassword() {
         email = etEmail.getText().toString();
         pass = etPass.getText().toString();
-        if (!email.equals(" ") && !pass.equals(" "))
-        {
+        if (!email.equals(" ") && !pass.equals(" ")) {
             btLogin.setEnabled(true);
             btLogin.setClickable(true);
         }
     }
 
-    private final View.OnClickListener onclickListener = new View.OnClickListener()
-    {
+    private final View.OnClickListener onclickListener = new View.OnClickListener() {
         @Override
-        public void onClick(View view)
-        {
-            switch (view.getId())
-            {
+        public void onClick(View view) {
+            switch (view.getId()) {
                 case R.id.btBack:
                     Intent intentBack = new Intent(LoginActivity.this, FirstLaunchActivity.class);
                     startActivity(intentBack);
@@ -77,26 +71,19 @@ public class LoginActivity extends Activity
         }
     };
 
-    private void checkLogin()
-    {
+    private void checkLogin() {
         getEmailAndPassword();
-        if ((emailFormatValidator.validate(email)) == false)
-        {
+        if ((emailFormatValidator.validate(email)) == false) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle("Error Signing In");
             builder.setMessage("Invalid email address");
             builder.setNegativeButton(R.string.OK, new OkOnClickListener());
             builder.show();
-        }
-        else
-        {
-            if (email.equals("test@gmail.com") && pass.equals("123456"))
-            {
-                Intent intent = new Intent(this, HomeActivity.class);
-                startActivity(intent);
-            }
-            else
-            {
+        } else {
+            if (email.equals(EMAIL) && pass.equals(PASSWORD)) {
+                Intent intent2 = new Intent(LoginActivity.this, HomeActivity.class);
+                startActivity(intent2);
+            } else {
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setTitle("Error Signing In");
                 builder.setMessage("Email address or password is incorrect.");
@@ -107,12 +94,10 @@ public class LoginActivity extends Activity
     }
 
     private final class OkOnClickListener implements
-            DialogInterface.OnClickListener
-    {
-        public void onClick(DialogInterface dialog, int which)
-        {
-            etEmail.setText("");
-            etPass.setText("");
+            DialogInterface.OnClickListener {
+        public void onClick(DialogInterface dialog, int which) {
+            etEmail.setText(EMAIL);
+            etPass.setText(PASSWORD);
         }
     }
 

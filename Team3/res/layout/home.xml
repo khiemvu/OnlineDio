@@ -38,9 +38,10 @@
     <ListView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/listView"/>
+            android:id="@+id/home_lvDetail" android:background="#f6f6f6"/>
     <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                    android:background="#f6f6f6" android:id="@+id/relativeLayout">
+                    android:background="#f6f6f6" android:id="@+id/relativeLayout"
+                    android:layout_alignParentBottom="true" android:layout_gravity="center_horizontal">
         <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center"
                      android:layout_centerHorizontal="true" android:id="@+id/ibtRecord"
                      android:layout_alignParentBottom="true" android:background="@drawable/home_button_recorder4"/>
