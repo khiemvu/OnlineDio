@@ -154,14 +154,14 @@ public class LoginActivity extends Activity
                     startActivity(intentBack);
                     break;
                 case R.id.login_btLogin:
-                    if (!checkNetwork())
-                    {
-                        break;
-                    }
-                    else
-                    {
-                        checkLogin();
-                    }
+//                    if (!checkNetwork())
+//                    {
+//                        break;
+//                    }
+//                    else
+//                    {
+                    checkLogin();
+//                    }
                     break;
                 case R.id.tvResetPass:
                     resetPassWord();
