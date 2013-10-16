@@ -1,4 +1,4 @@
-package com.qsoft.OnlineDio;
+package com.qsoft.Activity;
 
 import android.app.Activity;
 import android.content.Context;
@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.qsoft.Model.RowsInfo;
+import com.qsoft.OnlineDio.R;
 
 import java.util.List;
 
@@ -45,7 +47,7 @@ public class ListViewArrayAdapter extends ArrayAdapter<RowsInfo>
                 .getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
         if (convertView == null)
         {
-            convertView = mInflater.inflate(R.layout.items_detail_layout, null);
+            convertView = mInflater.inflate(R.layout.home_items_layout, null);
             holder = new ViewHolder();
 
             holder.ivAvatar = (ImageView) convertView.findViewById(R.id.ivAvatar);

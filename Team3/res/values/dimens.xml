@@ -4,4 +4,48 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
+    <dimen name="program_bt_back_margin_top">5dp</dimen>
+    <dimen name="program_tv_Program_margin_top">5dp</dimen>
+    <dimen name="program_tv_Program_margin_left">70dp</dimen>
+    <dimen name="program_tv_Program_size">20dp</dimen>
+    <dimen name="program_iv_Program_margin_top">15dp</dimen>
+    <dimen name="program_iv_Program_margin_left">10dp</dimen>
+    <dimen name="program_tvTime_margin_left">100dp</dimen>
+    <dimen name="program_tvName_size">17dp</dimen>
+    <dimen name="program_tvTime_size">15dp</dimen>
+    <dimen name="program_tvTitle_size">20dp</dimen>
+    <dimen name="program_tvName_margin_left">5dp</dimen>
+    <dimen name="program_tvTitle_margin_left">5dp</dimen>
+
+    <dimen name="program_tvView_margin_left">5dp</dimen>
+    <dimen name="program_tvView_size">15dp</dimen>
+    <dimen name="program_tvView_margin_top">8dp</dimen>
+    <dimen name="program_tvView_padding_left">5dp</dimen>
+
+    <dimen name="program_tvPlayTime_margin_left">15dp</dimen>
+    <dimen name="program_tvPlayTime_margin_top">8dp</dimen>
+    <dimen name="program_tvPlayTime_size">15dp</dimen>
+
+    <dimen name="program_tvLike_margin_top">8dp</dimen>
+    <dimen name="program_tvLike_margin_left">15dp</dimen>
+    <dimen name="program_tvLike_size">15dp</dimen>
+
+    <dimen name="program_btEdit_margin_left">20dp</dimen>
+    <dimen name="program_btEdit_margin_top">22dp</dimen>
+    <dimen name="program_tvDelete_margin_left">2dp</dimen>
+    <dimen name="program_tvDelete_margin_top">20dp</dimen>
+    <dimen name="program_tvDelete_size">15dp</dimen>
+    <dimen name="program_btFavorite_margin_left">20dp</dimen>
+    <dimen name="program_btFavorite_margin_top">3dp</dimen>
+
+    <dimen name="program_btLike_margin_left">3dp</dimen>
+    <dimen name="program_btLike_margin_top">3dp</dimen>
+    <dimen name="program_etLine_margin_left">5dp</dimen>
+    <dimen name="program_btDelete_margin_left">5dp</dimen>
+    <dimen name="program_btDelete_margin_top">20dp</dimen>
+    <dimen name="program_btTwitter_margin_top">10dp</dimen>
+    <dimen name="program_btTwitter_margin_left">5dp</dimen>
+    <dimen name="nv_sideBar_header_title_margin_left">10dp</dimen>
+    <dimen name="nv_sideBar_header_title_margin_top">10dp</dimen>
+
 </resources>

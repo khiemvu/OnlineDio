@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *******************************************************************************/
-package com.qsoft.OnlineDio;
+package com.qsoft.Activity;
 
 
 import android.content.Context;
@@ -24,6 +24,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.qsoft.Model.NsMenuItemModel;
+import com.qsoft.OnlineDio.R;
 
 public class NsMenuAdapter extends ArrayAdapter<NsMenuItemModel>
 {

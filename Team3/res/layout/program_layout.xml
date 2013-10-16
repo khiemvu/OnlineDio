@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+        >
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:background="@drawable/nav_bar">
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/program_btBack" android:background="@drawable/bt_back"
+                android:layout_marginTop="@dimen/program_bt_back_margin_top"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/program"
+                android:textSize="@dimen/program_tv_Program_size"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:id="@+id/tvProgram" android:layout_toRightOf="@+id/program_btBack"
+                android:layout_alignTop="@+id/program_btBack"
+                android:layout_marginLeft="@dimen/program_tv_Program_margin_left"
+                android:layout_marginTop="@dimen/program_tv_Program_margin_top"/>
+    </RelativeLayout>
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/program_backgroud">
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/program_ivImage"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="@dimen/program_iv_Program_margin_top"
+                android:layout_marginLeft="@dimen/program_iv_Program_margin_left"
+                android:layout_alignParentTop="true" android:src="@drawable/content_image2x"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/program_time"
+                android:textColor="@color/grey_while"
+                android:textSize="@dimen/program_tvTime_size"
+                android:layout_marginLeft="@dimen/program_tvTime_margin_left"
+                android:id="@+id/program_tvTime"
+                android:layout_toRightOf="@+id/program_ivImage" android:layout_alignParentTop="true"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/program_name"
+                android:id="@+id/program_tvName"
+                android:layout_toRightOf="@+id/program_ivImage"
+                android:textSize="@dimen/program_tvName_size"
+                android:textStyle="bold"
+                android:textColor="@color/grey"
+                android:layout_marginLeft="@dimen/program_tvName_margin_left"
+                android:layout_below="@+id/program_tvTime"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/program_title"
+                android:layout_marginLeft="@dimen/program_tvTitle_margin_left"
+                android:id="@+id/program_tvTitle"
+                android:layout_toRightOf="@+id/program_ivImage"
+                android:layout_below="@+id/program_tvName"
+                android:textSize="@dimen/program_tvTitle_size"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/program_view"
+                android:layout_marginLeft="@dimen/program_tvView_margin_left"
+                android:layout_marginTop="@dimen/program_tvView_margin_top"
+                android:id="@+id/program_tvView"
+                android:layout_toRightOf="@+id/program_ivImage"
+                android:layout_below="@+id/program_tvTitle"
+                android:textSize="@dimen/program_tvView_size"
+                android:drawableLeft="@drawable/content_image_view"
+                android:drawablePadding="@dimen/program_tvView_padding_left"
+                android:textColor="@color/grey_while"
+                />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/program_time_play"
+                android:layout_marginLeft="@dimen/program_tvPlayTime_margin_left"
+                android:layout_marginTop="@dimen/program_tvPlayTime_margin_top"
+                android:id="@+id/program_tvPlayTime"
+                android:layout_toRightOf="@+id/program_tvView"
+                android:layout_below="@+id/program_tvTitle"
+                android:textSize="@dimen/program_tvPlayTime_size"
+                android:drawableLeft="@drawable/content_image_played"
+                android:textColor="@color/grey_while"
+                />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/program_tvLike"
+                android:layout_marginLeft="@dimen/program_tvLike_margin_left"
+                android:layout_marginTop="@dimen/program_tvLike_margin_top"
+                android:id="@+id/program_tvLike"
+                android:layout_toRightOf="@+id/program_tvPlayTime"
+                android:layout_below="@+id/program_tvTitle"
+                android:textSize="@dimen/program_tvLike_size"
+                android:drawableLeft="@drawable/content_image_like"
+                android:textColor="@color/grey_while"
+                />
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/conten_imagenote"
+                android:layout_marginLeft="@dimen/program_btEdit_margin_left"
+                android:layout_marginTop="@dimen/program_btEdit_margin_top"
+                android:id="@+id/program_btEdit"
+                android:layout_below="@+id/program_ivImage"
+                />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/content_lineicon"
+                android:layout_toRightOf="@+id/program_btEdit"
+                android:id="@+id/program_etLine"
+                android:layout_below="@+id/program_ivImage"
+                android:layout_marginLeft="@dimen/program_etLine_margin_left"
+                android:layout_marginTop="@dimen/program_btEdit_margin_top"
+                />
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/content_imageryclebin"
+                android:layout_marginLeft="@dimen/program_btDelete_margin_left"
+                android:layout_marginTop="@dimen/program_btDelete_margin_top"
+                android:id="@+id/program_btDelete"
+                android:layout_toRightOf="@+id/program_etLine"
+                android:layout_below="@+id/program_ivImage"
+                android:textSize="@dimen/program_tvDelete_size"
+                android:textColor="@color/grey_while"
+                />
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/content_buttonfavorite"
+                android:layout_marginLeft="@dimen/program_btFavorite_margin_left"
+                android:layout_marginTop="@dimen/program_btFavorite_margin_top"
+                android:id="@+id/program_btFavorite"
+                android:layout_toRightOf="@+id/program_btDelete"
+                android:layout_below="@+id/program_ivImage"
+                />
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/content_buttonlike"
+                android:layout_marginLeft="@dimen/program_btLike_margin_left"
+                android:layout_marginTop="@dimen/program_btLike_margin_top"
+                android:id="@+id/program_btLike"
+                android:layout_toRightOf="@+id/program_btFavorite"
+                android:layout_below="@+id/program_ivImage"
+                />
+
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/content_buttonlist"
+                android:layout_marginLeft="@dimen/program_btLike_margin_left"
+                android:layout_marginTop="@dimen/program_btLike_margin_top"
+                android:id="@+id/program_btList"
+                android:layout_toRightOf="@+id/program_btLike"
+                android:layout_below="@+id/program_ivImage"
+                />
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/content_twitterbutton"
+                android:layout_marginLeft="@dimen/program_btTwitter_margin_left"
+                android:layout_marginTop="@dimen/program_btTwitter_margin_top"
+                android:id="@+id/program_btTwitter"
+                android:layout_toRightOf="@+id/program_btList"
+                android:layout_below="@+id/program_ivImage"
+                />
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/content_buttonfacebook"
+                android:layout_marginLeft="@dimen/program_btTwitter_margin_left"
+                android:layout_marginTop="@dimen/program_btTwitter_margin_top"
+                android:id="@+id/program_btFacebook"
+                android:layout_toRightOf="@+id/program_btTwitter"
+                android:layout_below="@+id/program_ivImage"
+                />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/program_backgroud">
+
+
+    </RelativeLayout>
+
+</LinearLayout>
+

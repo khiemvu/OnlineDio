@@ -20,7 +20,7 @@
     </string>
     <string name="reset">Reset</string>
     <string name="cancel">Cancel</string>
-    <string name="ns_menu_main_header">Menu</string>
+    <string name="ns_menu_main_header"></string>
 
     <string name="ns_menu_snippet1">Home</string>
     <string name="ns_menu_snippet2">Favorite</string>
@@ -35,6 +35,16 @@
         <b>My Station</b>
     </string>
     <string name="my_station_name">Mr.Bean Aloha</string>
+
+
+    <string name="program">Content</string>
+    <string name="program_time">a day ago</string>
+    <string name="program_name">Mr.Bean</string>
+    <string name="program_title">Sound of Silence</string>
+    <string name="program_view">100</string>
+    <string name="program_time_play">888</string>
+    <string name="program_tvLike">1000</string>
+    <string name="program_tvDelete">Delete</string>
 
 
 </resources>

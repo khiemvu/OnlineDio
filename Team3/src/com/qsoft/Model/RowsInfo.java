@@ -1,4 +1,4 @@
-package com.qsoft.OnlineDio;
+package com.qsoft.Model;
 
 /**
  * User: khiemvx

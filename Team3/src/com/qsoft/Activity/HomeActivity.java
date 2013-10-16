@@ -1,13 +1,22 @@
-package com.qsoft.OnlineDio;
+package com.qsoft.Activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.view.*;
-import android.widget.*;
+import android.view.Gravity;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.Toast;
+import com.qsoft.Model.NsMenuItemModel;
+import com.qsoft.Model.RowsInfo;
+import com.qsoft.OnlineDio.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -98,7 +107,7 @@ public class HomeActivity extends Activity implements AdapterView.OnItemClickLis
         }
         listView = (ListView) findViewById(R.id.home_lvDetail);
         ListViewArrayAdapter adapter = new ListViewArrayAdapter(this,
-                R.layout.items_detail_layout, rowItems);
+                R.layout.home_items_layout, rowItems);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(this);
     }
@@ -203,6 +212,11 @@ public class HomeActivity extends Activity implements AdapterView.OnItemClickLis
             mDrawerList.setItemChecked(position, true);
             String text = "menu click... should be implemented";
             Toast.makeText(HomeActivity.this, text, Toast.LENGTH_LONG).show();
+            if (position == 2)
+            {
+                Intent intent = new Intent(HomeActivity.this, ProgramActivity.class);
+                startActivity(intent);
+            }
             mDrawer.closeDrawer(mDrawerList);
         }
 

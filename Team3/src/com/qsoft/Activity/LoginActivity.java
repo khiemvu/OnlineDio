@@ -1,4 +1,4 @@
-package com.qsoft.OnlineDio;
+package com.qsoft.Activity;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import com.qsoft.OnlineDio.R;
 import com.qsoft.Validate.Constant;
 import com.qsoft.Validate.EmailFormatValidator;
 import com.qsoft.Validate.NetworkUtil;
@@ -197,7 +198,7 @@ public class LoginActivity extends Activity
         AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
         builder.setTitle("Forgot Password");
         LayoutInflater inflater = LoginActivity.this.getLayoutInflater();
-        builder.setView(inflater.inflate(R.layout.dialog_password_layout, null))
+        builder.setView(inflater.inflate(R.layout.password_layout, null))
                 .setPositiveButton(R.string.reset, new DialogInterface.OnClickListener()
                 {
                     @Override
@@ -206,7 +207,7 @@ public class LoginActivity extends Activity
                         //TODO sent password again
                     }
                 });
-        builder.setView(inflater.inflate(R.layout.dialog_password_layout, null))
+        builder.setView(inflater.inflate(R.layout.password_layout, null))
                 .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener()
                 {
                     @Override
