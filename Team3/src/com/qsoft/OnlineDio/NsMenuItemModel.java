@@ -5,20 +5,20 @@ public class NsMenuItemModel
 
     public int title;
     public int iconRes;
-    public int counter;
+    public boolean isButton;
     public boolean isHeader;
 
-    public NsMenuItemModel(int title, int iconRes, boolean header, int counter)
+    public NsMenuItemModel(int title, int iconRes, boolean header, boolean isButton)
     {
         this.title = title;
         this.iconRes = iconRes;
         this.isHeader = header;
-        this.counter = counter;
+        this.isButton = isButton;
     }
 
     public NsMenuItemModel(int title, int iconRes, boolean header)
     {
-        this(title, iconRes, header, 0);
+        this(title, iconRes, header, false);
     }
 
     public NsMenuItemModel(int title, int iconRes)

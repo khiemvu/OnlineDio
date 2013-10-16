@@ -21,6 +21,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -69,13 +70,13 @@ public class NsMenuAdapter extends ArrayAdapter<NsMenuItemModel>
     {
         public final TextView textHolder;
         public final ImageView imageHolder;
-        public final TextView textCounterHolder;
+        public final Button buttonHolder;
 
-        public ViewHolder(TextView text1, ImageView image1, TextView textcounter1)
+        public ViewHolder(TextView text1, ImageView image1, Button button1)
         {
             this.textHolder = text1;
             this.imageHolder = image1;
-            this.textCounterHolder = textcounter1;
+            buttonHolder = button1;
         }
     }
 
@@ -88,18 +89,18 @@ public class NsMenuAdapter extends ArrayAdapter<NsMenuItemModel>
 
         if (view == null)
         {
-            int layout = R.layout.ns_menu_row_counter;
+            int layout = R.layout.menu_row;
             if (item.isHeader)
             {
-                layout = R.layout.ns_menu_row_header;
+                layout = R.layout.menu_row_header;
             }
 
             view = LayoutInflater.from(getContext()).inflate(layout, null);
 
-            TextView text1 = (TextView) view.findViewById(R.id.menurow_title);
-            ImageView image1 = (ImageView) view.findViewById(R.id.menurow_icon);
-            TextView textcounter1 = (TextView) view.findViewById(R.id.menurow_counter);
-            view.setTag(new ViewHolder(text1, image1, textcounter1));
+            TextView text1 = (TextView) view.findViewById(R.id.sideBar_menu_tvTitle);
+            ImageView image1 = (ImageView) view.findViewById(R.id.sideBar_menu_ivIcon);
+            Button btNote = (Button) view.findViewById(R.id.sideBar_menu_btSupport);
+            view.setTag(new ViewHolder(text1, image1, btNote));
         }
 
         if (holder == null && view != null)
@@ -119,16 +120,15 @@ public class NsMenuAdapter extends ArrayAdapter<NsMenuItemModel>
                 holder.textHolder.setText(item.title);
             }
 
-            if (holder.textCounterHolder != null)
+            if (holder.buttonHolder != null)
             {
-                if (item.counter > 0)
+                if (item.isButton == true)
                 {
-                    holder.textCounterHolder.setVisibility(View.VISIBLE);
-                    holder.textCounterHolder.setText("" + item.counter);
+                    holder.buttonHolder.setVisibility(View.VISIBLE);
                 }
                 else
                 {
-                    holder.textCounterHolder.setVisibility(View.GONE);
+                    holder.buttonHolder.setVisibility(View.GONE);
                 }
             }
 

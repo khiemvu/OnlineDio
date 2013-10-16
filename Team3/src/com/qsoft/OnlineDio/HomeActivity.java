@@ -7,10 +7,7 @@ import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.view.*;
-import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.ListView;
-import android.widget.Toast;
+import android.widget.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +19,7 @@ public class HomeActivity extends Activity implements AdapterView.OnItemClickLis
     private DrawerLayout mDrawer;
     private CustomActionBarDrawerToggle mDrawerToggle;
     private String[] menuItems;
+    private View myStationReLayout;
     public static final String[] titles = new String[]{"Sound Of Silence", "Sound Of Silence", "Sound Of Silence",
             "Sound Of Silence", "Sound Of Silence", "Sound Of Silence"};
 
@@ -52,20 +50,43 @@ public class HomeActivity extends Activity implements AdapterView.OnItemClickLis
         // opens
         mDrawer.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
 
-        _initMenu();
+        initMenu();
         mDrawerToggle = new CustomActionBarDrawerToggle(this, mDrawer);
         mDrawer.setDrawerListener(mDrawerToggle);
         Button btNavigate = (Button) findViewById(R.id.btNavigate);
-        btNavigate.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view)
-            {
-                mDrawer.openDrawer(mDrawerList);
+        btNavigate.setOnClickListener(onclickListener);
 
-            }
-        });
+
     }
+
+    private final View.OnClickListener onclickListener = new View.OnClickListener()
+    {
+        @Override
+        public void onClick(View view)
+        {
+            switch (view.getId())
+            {
+
+                case R.id.myStationReLayout:
+
+                    //Toast.makeText(getApplicationContext(), "fafaf", Toast.LENGTH_LONG).show();
+                    break;
+                case R.id.btNavigate:
+                    mDrawer.openDrawer(mDrawerList);
+
+                    myStationReLayout = findViewById(R.id.myStationReLayout);
+                    myStationReLayout.setOnClickListener(new View.OnClickListener()
+                    {
+                        @Override
+                        public void onClick(View view)
+                        {
+                            Toast.makeText(getApplicationContext(), "fafaf", Toast.LENGTH_LONG).show();
+                        }
+                    });
+                    break;
+            }
+        }
+    };
 
     private void fillDataToListView()
     {
@@ -82,7 +103,7 @@ public class HomeActivity extends Activity implements AdapterView.OnItemClickLis
         listView.setOnItemClickListener(this);
     }
 
-    private void _initMenu()
+    private void initMenu()
     {
         NsMenuAdapter mAdapter = new NsMenuAdapter(this);
 
@@ -106,20 +127,17 @@ public class HomeActivity extends Activity implements AdapterView.OnItemClickLis
                     "drawable", this.getPackageName());
 
             NsMenuItemModel mItem = new NsMenuItemModel(id_title, id_icon);
-            if (res == 1)
+            if (res == 6)
             {
-                mItem.counter = 12; //it is just an example...
+                mItem.isButton = true;
             }
-            if (res == 3)
-            {
-                mItem.counter = 3; //it is just an example...
-            }
+
             mAdapter.addItem(mItem);
             res++;
         }
 
 
-        mDrawerList = (ListView) findViewById(R.id.drawer);
+        mDrawerList = (ListView) findViewById(R.id.sideBar_lvDrawer);
         if (mDrawerList != null)
         {
             mDrawerList.setAdapter(mAdapter);
@@ -144,23 +162,6 @@ public class HomeActivity extends Activity implements AdapterView.OnItemClickLis
         mDrawerToggle.onConfigurationChanged(newConfig);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.main, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    /* Called whenever we call invalidateOptionsMenu() */
-    @Override
-    public boolean onPrepareOptionsMenu(Menu menu)
-    {
-        // If the nav drawer is open, hide action items related to the content view
-        boolean drawerOpen = mDrawer.isDrawerOpen(mDrawerList);
-        menu.findItem(R.id.action_save).setVisible(!drawerOpen);
-        return super.onPrepareOptionsMenu(menu);
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
@@ -186,8 +187,7 @@ public class HomeActivity extends Activity implements AdapterView.OnItemClickLis
                     mActivity,
                     mDrawerLayout,
                     R.drawable.ic_drawer,
-                    R.string.ns_menu_open,
-                    R.string.ns_menu_close);
+                    0, 0);
         }
     }
 
@@ -203,9 +203,7 @@ public class HomeActivity extends Activity implements AdapterView.OnItemClickLis
             mDrawerList.setItemChecked(position, true);
             String text = "menu click... should be implemented";
             Toast.makeText(HomeActivity.this, text, Toast.LENGTH_LONG).show();
-            //You should reset item counter 
             mDrawer.closeDrawer(mDrawerList);
-
         }
 
     }
