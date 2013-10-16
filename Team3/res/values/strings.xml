@@ -45,6 +45,11 @@
     <string name="program_time_play">888</string>
     <string name="program_tvLike">1000</string>
     <string name="program_tvDelete">Delete</string>
+    <string name="program_timeCurPlay">1:68</string>
+    <string name="program_timePlay">4:86</string>
+    <string name="program_btThumnail">Thumnail</string>
+    <string name="program_btDetail">Detail</string>
+    <string name="program_btComment">Comments(280)</string>
 
 
 </resources>

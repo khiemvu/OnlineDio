@@ -5,4 +5,5 @@
     <color name="black">#161616</color>
     <color name="While">#ffffff</color>
     <color name="grey">#656565</color>
+    <color name="ColorTextViewTime">#8a8a8a</color>
 </resources>
