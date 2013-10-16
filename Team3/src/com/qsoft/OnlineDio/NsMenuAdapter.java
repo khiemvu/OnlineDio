@@ -89,10 +89,10 @@ public class NsMenuAdapter extends ArrayAdapter<NsMenuItemModel>
 
         if (view == null)
         {
-            int layout = R.layout.menu_row;
+            int layout = R.layout.menu_row_layout;
             if (item.isHeader)
             {
-                layout = R.layout.menu_row_header;
+                layout = R.layout.menu_row_header_layout;
             }
 
             view = LayoutInflater.from(getContext()).inflate(layout, null);

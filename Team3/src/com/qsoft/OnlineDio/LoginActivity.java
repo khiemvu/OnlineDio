@@ -39,7 +39,7 @@ public class LoginActivity extends Activity
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login);
+        setContentView(R.layout.login_layout);
 
         initComponent();
 
@@ -197,7 +197,7 @@ public class LoginActivity extends Activity
         AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
         builder.setTitle("Forgot Password");
         LayoutInflater inflater = LoginActivity.this.getLayoutInflater();
-        builder.setView(inflater.inflate(R.layout.dialog_password, null))
+        builder.setView(inflater.inflate(R.layout.dialog_password_layout, null))
                 .setPositiveButton(R.string.reset, new DialogInterface.OnClickListener()
                 {
                     @Override
@@ -206,7 +206,7 @@ public class LoginActivity extends Activity
                         //TODO sent password again
                     }
                 });
-        builder.setView(inflater.inflate(R.layout.dialog_password, null))
+        builder.setView(inflater.inflate(R.layout.dialog_password_layout, null))
                 .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener()
                 {
                     @Override

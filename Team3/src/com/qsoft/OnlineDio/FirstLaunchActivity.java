@@ -20,7 +20,7 @@ public class FirstLaunchActivity extends Activity
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.first_launch);
+        setContentView(R.layout.first_launch_layout);
         launch_btLogin = (Button) findViewById(R.id.launch_btLogin);
         launch_btLogin.setOnClickListener(new View.OnClickListener()
         {

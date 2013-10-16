@@ -39,7 +39,7 @@ public class HomeActivity extends Activity implements AdapterView.OnItemClickLis
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.home);
+        setContentView(R.layout.home_layout);
 
         fillDataToListView();
         // enable ActionBar app icon to behave as action to toggle nav drawer
@@ -98,7 +98,7 @@ public class HomeActivity extends Activity implements AdapterView.OnItemClickLis
         }
         listView = (ListView) findViewById(R.id.home_lvDetail);
         ListViewArrayAdapter adapter = new ListViewArrayAdapter(this,
-                R.layout.items_detail, rowItems);
+                R.layout.items_detail_layout, rowItems);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(this);
     }
@@ -167,7 +167,7 @@ public class HomeActivity extends Activity implements AdapterView.OnItemClickLis
     public boolean onOptionsItemSelected(MenuItem item)
     {
         /*
-         * The action bar home/up should open or close the drawer.
+         * The action bar home_layout/up should open or close the drawer.
 		 * ActionBarDrawerToggle will take care of this.
 		 */
         if (mDrawerToggle.onOptionsItemSelected(item))

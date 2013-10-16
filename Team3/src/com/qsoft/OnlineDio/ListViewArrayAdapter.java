@@ -45,7 +45,7 @@ public class ListViewArrayAdapter extends ArrayAdapter<RowsInfo>
                 .getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
         if (convertView == null)
         {
-            convertView = mInflater.inflate(R.layout.items_detail, null);
+            convertView = mInflater.inflate(R.layout.items_detail_layout, null);
             holder = new ViewHolder();
 
             holder.ivAvatar = (ImageView) convertView.findViewById(R.id.ivAvatar);
