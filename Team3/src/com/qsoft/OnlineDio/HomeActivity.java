@@ -1,7 +1,6 @@
 package com.qsoft.OnlineDio;
 
 import android.app.Activity;
-import android.content.DialogInterface;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -12,7 +11,6 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
-import com.qsoft.Validate.Constant;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,7 +41,7 @@ public class HomeActivity extends Activity implements AdapterView.OnItemClickLis
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_drawer);
+        setContentView(R.layout.home);
 
         fillDataToListView();
         // enable ActionBar app icon to behave as action to toggle nav drawer
