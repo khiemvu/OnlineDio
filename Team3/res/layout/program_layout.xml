@@ -3,6 +3,7 @@
               android:orientation="vertical"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
+              android:background="@color/program_backgroud"
         >
     <RelativeLayout
             android:layout_width="fill_parent"
@@ -10,8 +11,11 @@
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/program_btBack" android:background="@drawable/bt_back"
-                android:layout_marginTop="@dimen/program_bt_back_margin_top"/>
+                android:id="@+id/program_btBack" android:background="@drawable/button_back"
+                android:layout_marginTop="@dimen/program_bt_back_margin_top"
+                android:layout_marginLeft="@dimen/program_bt_back_margin_top"
+                android:layout_marginRight="@dimen/program_bt_back_margin_top"
+                android:layout_marginBottom="@dimen/program_bt_back_margin_top"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -31,6 +35,7 @@
         <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/content_no_image2x"
                 android:id="@+id/program_ivImage"
                 android:layout_alignParentLeft="true"
                 android:layout_marginTop="@dimen/program_iv_Program_margin_top"
@@ -140,13 +145,12 @@
                 android:id="@+id/program_btDelete"
                 android:layout_toRightOf="@+id/program_etLine"
                 android:layout_below="@+id/program_ivImage"
-                android:textSize="@dimen/program_tvDelete_size"
-                android:textColor="@color/grey_while"
                 />
-        <Button
+        <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/content_buttonfavorite"
+                android:button="@null"
+                android:background="@drawable/program_custom_bt_start"
                 android:layout_marginLeft="@dimen/program_btFavorite_margin_left"
                 android:layout_marginTop="@dimen/program_btFavorite_margin_top"
                 android:id="@+id/program_btFavorite"
@@ -154,10 +158,11 @@
                 android:layout_below="@+id/program_ivImage"
                 />
 
-        <Button
+        <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/content_buttonlike"
+                android:button="@null"
+                android:background="@drawable/program_custom_bt_like"
                 android:layout_marginLeft="@dimen/program_btLike_margin_left"
                 android:layout_marginTop="@dimen/program_btLike_margin_top"
                 android:id="@+id/program_btLike"
@@ -166,10 +171,11 @@
                 />
 
 
-        <Button
+        <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/content_buttonlist"
+                android:button="@null"
+                android:background="@drawable/program_custom_bt_list"
                 android:layout_marginLeft="@dimen/program_btLike_margin_left"
                 android:layout_marginTop="@dimen/program_btLike_margin_top"
                 android:id="@+id/program_btList"
@@ -202,7 +208,9 @@
     <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/content_group_background">
+            android:layout_marginTop="@dimen/program_group_sekbar_margin_top"
+            android:background="@drawable/content_group_background"
+            >
 
 
         <Button
@@ -224,21 +232,22 @@
                 android:textColor="@color/ColorTextViewTime"
                 />
         <SeekBar
-                android:layout_width="270dp"
+                android:layout_width="@dimen/program_seekbar_length"
                 android:layout_height="wrap_content"
                 android:id="@+id/program_sbTime"
                 android:layout_toRightOf="@+id/program_tvTimeCur"
                 android:layout_marginLeft="@dimen/program_sbTime_margin_left"
-                android:layout_marginRight="@dimen/program_sbTime_margin_right"
                 android:layout_marginTop="@dimen/program_sbTime_margin_top"
+                android:progressDrawable="@drawable/scrubber_progress_horizontal_holo_light"
+                android:thumb="@drawable/scrubber_control_selector_holo_light"
                 android:max="100" android:progress="1" android:indeterminate="false"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/program_tvTimePlay"
                 android:layout_toRightOf="@+id/program_sbTime"
-                android:layout_marginRight="@dimen/program_tvTimePlay_margin_right"
                 android:layout_marginTop="@dimen/program_tvTimePlay_margin_top"
+                android:layout_marginLeft="@dimen/program_tvTimePlay_margin_left"
                 android:text="@string/program_timePlay"
                 android:textSize="@dimen/program_tvLike_size"
                 android:textColor="@color/ColorTextViewTime"
@@ -255,63 +264,90 @@
                 android:layout_marginTop="@dimen/program_btMute_margin_top"
                 />
         <SeekBar
-                android:layout_width="270dp"
+                android:layout_width="@dimen/program_seekbar_length"
                 android:layout_height="wrap_content"
                 android:id="@+id/program_sbVolume"
                 android:layout_toRightOf="@+id/program_btMute"
                 android:layout_below="@+id/program_sbTime"
                 android:layout_marginLeft="@dimen/program_sbTime_margin_left"
-                android:layout_marginRight="@dimen/program_sbTime_margin_right"
+                android:progressDrawable="@drawable/scrubber_progress_horizontal_holo_light"
+                android:thumb="@drawable/scrubber_control_selector_holo_light"
                 android:layout_marginTop="@dimen/program_sbTime_margin_top"
                 android:max="100" android:progress="1" android:indeterminate="false"/>
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/content_image_volumn2"
-                android:id="@+id/program_btAdjustVolumn"
+                android:id="@+id/program_btMaxVolumn"
                 android:layout_toRightOf="@+id/program_sbVolume"
                 android:layout_below="@+id/program_tvTimePlay"
-                android:layout_marginRight="@dimen/program_tvTimePlay_margin_right"
-                android:layout_marginTop="@dimen/program_tvTimePlay_margin_top"
+                android:layout_marginLeft="@dimen/program_tvTimePlay_margin_left"
+                android:layout_marginTop="@dimen/program_btMaxVolumn_margin_top"
                 />
     </RelativeLayout>
     <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:background="@color/program_backgroud"
-
             >
-
-        <LinearLayout
+        <RelativeLayout
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content" android:weightSum="1">
-            <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/program_btThumnail"
-                    android:id="@+id/program_btThumnail" android:layout_weight="0.33"/>
-            <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/program_btDetail"
-                    android:id="@+id/program_btDetail" android:layout_weight="0.33"/>
-            <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/program_btComment"
-                    android:id="@+id/program_btComment" android:layout_weight="0.34"/>
-        </LinearLayout>
-        <ImageView
+                android:layout_height="wrap_content">
+            <RadioGroup
+                    android:id="@+id/rgbt_groupButton"
+                    android:layout_width="fill_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                <RadioButton
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/program_custom_rbt"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="@string/program_btThumnail"
+                        android:id="@+id/program_btThumnail"/>
+                <RadioButton
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/program_custom_rbt"
+                        android:layout_toRightOf="@+id/program_btThumnail"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="@string/program_btDetail"
+                        android:id="@+id/program_btDetail"/>
+                <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/program_custom_rbt"
+                        android:layout_toRightOf="@+id/program_btDetail"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="@string/program_btComment"
+                        android:id="@+id/program_btComment"/>
+            </RadioGroup>
+        </RelativeLayout>
+        <!--<ImageView-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:id="@+id/program_ivDetail"-->
+        <!--android:layout_below="@+id/program_btThumnail"-->
+        <!--android:src="@drawable/content_image_detail"-->
+        <!--android:layout_marginRight="@dimen/program_ivDetail_margin"-->
+        <!--android:layout_marginTop="@dimen/program_ivDetail_margin_top"-->
+        <!--android:layout_marginLeft="@dimen/program_ivDetail_margin"-->
+        <!--android:layout_marginBottom="@dimen/program_ivDetail_margin"-->
+        <!--android:contentDescription=""/>-->
+        <FrameLayout
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:id="@+id/program_ivDetail"
                 android:layout_below="@+id/program_btThumnail"
-                android:src="@drawable/content_image_detail"
                 android:layout_marginRight="@dimen/program_ivDetail_margin"
                 android:layout_marginTop="@dimen/program_ivDetail_margin_top"
                 android:layout_marginLeft="@dimen/program_ivDetail_margin"
                 android:layout_marginBottom="@dimen/program_ivDetail_margin"
-                android:contentDescription=""/>
+                android:id="@+id/program_fl_generic"
+                >
+        </FrameLayout>
     </RelativeLayout>
 
 </LinearLayout>
