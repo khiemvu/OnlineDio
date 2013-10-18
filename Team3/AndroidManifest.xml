@@ -6,17 +6,17 @@
     <uses-sdk android:minSdkVersion="8"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <application android:label="@string/app_name" android:icon="@drawable/ic_launcher">
-        <activity android:name="com.qsoft.Activity.FirstLaunchActivity"
+        <activity android:name=".Activity.FirstLaunchActivity"
                   android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name="com.qsoft.Activity.LoginActivity"/>
-        <activity android:name="com.qsoft.Activity.HomeActivity"/>
-        <activity android:name="com.qsoft.Activity.ProgramActivity"/>
-        <!--<activity android:name=".MainActivity"/>-->
+        <activity android:name=".Activity.LoginActivity"/>
+        <activity android:name=".Activity.HomeActivity"/>
+        <activity android:name=".Activity.ProgramActivity"/>
+        <activity android:name=".FragmentActivity.AddCommentFragmentActivity"/>
 
     </application>
 </manifest>

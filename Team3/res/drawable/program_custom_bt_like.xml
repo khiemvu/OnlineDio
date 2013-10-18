@@ -2,14 +2,14 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_focused="false"
           android:state_checked="false"
-          android:drawable="@drawable/content_buttonlike"/>
+          android:drawable="@drawable/content_bt_like"/>
     <item
-            android:drawable="@drawable/content_buttonlikepress"
+            android:drawable="@drawable/content_bt_like_press"
             android:state_pressed="true"/>
     <item
-            android:drawable="@drawable/content_buttonlikepress"
+            android:drawable="@drawable/content_bt_like_press"
             android:state_checked="true"/>
     <item
-            android:drawable="@drawable/content_buttonlikepress"
+            android:drawable="@drawable/content_bt_like_press"
             android:state_checkable="true"/>
 </selector>

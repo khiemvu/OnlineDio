@@ -7,7 +7,7 @@
     <dimen name="program_bt_back_margin_top">2dp</dimen>
     <dimen name="program_tv_Program_margin_top">3dp</dimen>
     <dimen name="program_tv_Program_margin_left">70dp</dimen>
-    <dimen name="program_tv_Program_size">20dp</dimen>
+    <dimen name="Title_size">20dp</dimen>
     <dimen name="program_iv_Program_margin_top">15dp</dimen>
     <dimen name="program_iv_Program_margin_left">10dp</dimen>
     <dimen name="program_tvTime_margin_left">120dp</dimen>
@@ -62,5 +62,12 @@
     <dimen name="program_group_sekbar_margin_top">10dp</dimen>
     <dimen name="program_btMaxVolumn_margin_top">16dp</dimen>
     <dimen name="program_seekbar_length">175dp</dimen>
+
+
+    <dimen name="Title_comment_margin_left">55dp</dimen>
+    <dimen name="header_margin_top">8dp</dimen>
+
+
+    <dimen name="title_bt_margin_all">4dp</dimen>
 
 </resources>

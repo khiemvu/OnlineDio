@@ -20,7 +20,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/program"
-                android:textSize="@dimen/program_tv_Program_size"
+                android:textSize="@dimen/Title_size"
                 android:textColor="@android:color/white"
                 android:textStyle="bold"
                 android:id="@+id/tvProgram" android:layout_toRightOf="@+id/program_btBack"
@@ -35,7 +35,7 @@
         <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/content_no_image2x"
+                android:background="@drawable/content_no_image"
                 android:id="@+id/program_ivImage"
                 android:layout_alignParentLeft="true"
                 android:layout_marginTop="@dimen/program_iv_Program_margin_top"
@@ -185,7 +185,7 @@
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/content_twitterbutton"
+                android:background="@drawable/content_bt_twitter"
                 android:layout_marginLeft="@dimen/program_btTwitter_margin_left"
                 android:layout_marginTop="@dimen/program_btTwitter_margin_top"
                 android:id="@+id/program_btTwitter"
@@ -195,7 +195,7 @@
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/content_buttonfacebook"
+                android:background="@drawable/content_bt_face"
                 android:layout_marginLeft="@dimen/program_btTwitter_margin_left"
                 android:layout_marginTop="@dimen/program_btTwitter_margin_top"
                 android:id="@+id/program_btFacebook"
@@ -277,7 +277,7 @@
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/content_image_volumn2"
+                android:background="@drawable/content_image_volume2"
                 android:id="@+id/program_btMaxVolumn"
                 android:layout_toRightOf="@+id/program_sbVolume"
                 android:layout_below="@+id/program_tvTimePlay"
@@ -305,26 +305,37 @@
                         android:button="@null"
                         android:gravity="center"
                         android:text="@string/program_btThumnail"
-                        android:id="@+id/program_btThumnail"/>
+                        android:id="@+id/program_rbtThumnail"/>
                 <RadioButton
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:background="@drawable/program_custom_rbt"
-                        android:layout_toRightOf="@+id/program_btThumnail"
+                        android:layout_toRightOf="@+id/program_rbtThumnail"
                         android:button="@null"
                         android:gravity="center"
                         android:text="@string/program_btDetail"
-                        android:id="@+id/program_btDetail"/>
+                        android:id="@+id/program_rbtDetail"/>
                 <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/program_custom_rbt"
-                        android:layout_toRightOf="@+id/program_btDetail"
+                        android:layout_toRightOf="@+id/program_rbtDetail"
                         android:button="@null"
                         android:gravity="center"
                         android:text="@string/program_btComment"
-                        android:id="@+id/program_btComment"/>
+                        android:id="@+id/program_rbtComment"/>
             </RadioGroup>
+            <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_below="@+id/program_rbtThumnail"
+                    android:layout_marginRight="@dimen/program_ivDetail_margin"
+                    android:layout_marginTop="@dimen/program_ivDetail_margin_top"
+                    android:layout_marginLeft="@dimen/program_ivDetail_margin"
+                    android:layout_marginBottom="@dimen/program_ivDetail_margin"
+                    android:id="@+id/program_fl_generic"
+                    >
+            </FrameLayout>
         </RelativeLayout>
         <!--<ImageView-->
         <!--android:layout_width="fill_parent"-->
@@ -337,17 +348,6 @@
         <!--android:layout_marginLeft="@dimen/program_ivDetail_margin"-->
         <!--android:layout_marginBottom="@dimen/program_ivDetail_margin"-->
         <!--android:contentDescription=""/>-->
-        <FrameLayout
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_below="@+id/program_btThumnail"
-                android:layout_marginRight="@dimen/program_ivDetail_margin"
-                android:layout_marginTop="@dimen/program_ivDetail_margin_top"
-                android:layout_marginLeft="@dimen/program_ivDetail_margin"
-                android:layout_marginBottom="@dimen/program_ivDetail_margin"
-                android:id="@+id/program_fl_generic"
-                >
-        </FrameLayout>
     </RelativeLayout>
 
 </LinearLayout>

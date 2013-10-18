@@ -3,7 +3,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" android:background="@drawable/fl_background"
+                android:layout_height="match_parent" android:background="@drawable/launch_background"
                 android:clickable="false">
     <TextView
             android:layout_width="fill_parent"
@@ -41,14 +41,14 @@
             android:layout_height="wrap_content"
             android:id="@+id/btLoginFB"
             android:layout_gravity="center_horizontal"
-            android:background="@drawable/fl_btn_login_fb"
-            android:layout_alignParentLeft="true" android:layout_marginLeft="80dp"
+            android:background="@drawable/launch_bt_login_fb"
+            android:layout_alignParentLeft="true" android:layout_marginLeft="50dp"
             android:layout_above="@+id/textView"/>
     <Button
             android:layout_width="64dp"
             android:layout_height="wrap_content"
             android:id="@+id/launch_btLogin"
-            android:background="@drawable/fl_btn_login"
+            android:background="@drawable/launch_bt_login"
             android:layout_gravity="center_horizontal" android:layout_centerHorizontal="true"
             android:layout_toRightOf="@+id/btLoginFB"
             android:layout_alignTop="@+id/btLoginFB"
@@ -58,7 +58,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/btSignUp"
             android:layout_gravity="center_horizontal"
-            android:background="@drawable/fl_btn_signup"
+            android:background="@drawable/launch_bt_signup"
             android:gravity="center_horizontal"
             android:layout_toRightOf="@+id/launch_btLogin"
             android:layout_above="@+id/textView" android:layout_marginLeft="20dp"/>

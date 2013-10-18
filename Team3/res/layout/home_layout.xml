@@ -11,7 +11,7 @@
             android:layout_height="match_parent" xmlns:android="http://schemas.android.com/apk/res/android">
         <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp" android:background="@drawable/nav_bar">
+                android:layout_height="wrap_content" android:background="@drawable/nav_bar">
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -25,16 +25,16 @@
                     android:layout_height="wrap_content"
 
                     android:id="@+id/btNavigate" android:layout_alignParentLeft="true"
-                    android:background="@drawable/my_favorite_btn_option2x" android:layout_margin="3dp"
+                    android:background="@drawable/home_bt_navigate" android:layout_margin="@dimen/title_bt_margin_all"
                     android:singleLine="false"/>
             <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/btGlobal"
 
-                    android:background="@drawable/home_button_notification2x"
+                    android:background="@drawable/home_bt_notification"
                     android:layout_alignParentRight="true"
-                    android:layout_alignParentBottom="false" android:layout_margin="3dp"/>
+                    android:layout_alignParentBottom="false" android:layout_margin="@dimen/title_bt_margin_all"/>
         </RelativeLayout>
         <TextView
                 android:layout_width="match_parent"
