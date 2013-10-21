@@ -23,4 +23,14 @@
         <item>sidebar_image_icon_logout2x</item>
     </array>
 
+    <string-array name="country_array">
+        <item>Greece</item>
+        <item>United Kingdom</item>
+        <item>Italy</item>
+        <item>France</item>
+        <item>Germany</item>
+        <item>Turkey</item>
+        <item>Poland</item>
+        <item>India</item>
+    </string-array>
 </resources>

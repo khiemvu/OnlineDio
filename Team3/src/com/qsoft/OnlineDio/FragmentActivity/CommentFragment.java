@@ -18,7 +18,7 @@ import java.util.List;
  * User: khiemvx
  * Date: 10/17/13
  */
-public class CommentFragmentActivity extends Fragment
+public class CommentFragment extends Fragment
 {
     public static final String[] names = new String[]{
             "Khiemvx", "Khiemvx", "Khiemvx", "Khiemvx", "Khiemvx", "Khiemvx"};

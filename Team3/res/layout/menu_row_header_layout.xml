@@ -31,7 +31,7 @@
     </RelativeLayout>
     <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
                     android:id="@+id/myStationReLayout"
-                    android:background="@color/program_backgroud">
+                    android:background="@color/program_background">
         <ImageView android:id="@+id/sideBar_header_avatar" android:layout_width="100dp"
                    android:layout_height="100dp" android:layout_alignParentLeft="true"
                    android:layout_marginLeft="10dp" android:gravity="center"

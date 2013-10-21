@@ -46,11 +46,11 @@ public class AddCommentFragmentActivity extends FragmentActivity
             switch (v.getId())
             {
                 case R.id.comment_btCancel:
-                    Intent intentProgram = new Intent(AddCommentFragmentActivity.this, CommentFragmentActivity.class);
+                    Intent intentProgram = new Intent(AddCommentFragmentActivity.this, CommentFragment.class);
                     startActivity(intentProgram);
                     break;
                 case R.id.comment_btPost:
-                    Intent intentProgram_Extra = new Intent(AddCommentFragmentActivity.this, CommentFragmentActivity.class);
+                    Intent intentProgram_Extra = new Intent(AddCommentFragmentActivity.this, CommentFragment.class);
                     String comment = comment_etComment.getText().toString();
                     intentProgram_Extra.putExtra("COMMENT", comment);
                     startActivity(intentProgram_Extra);

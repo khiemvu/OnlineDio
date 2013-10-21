@@ -1,36 +1,25 @@
 package com.qsoft.OnlineDio.Model;
 
 /**
- * User: khiemvx
- * Date: 10/14/13
+ * User: Dell 3360
+ * Date: 10/20/13
+ * Time: 8:39 AM
  */
 public class HomeModel
 {
-    private int idImage;
     private String title;
-    private String person;
-    private int like;
-    private int comment;
+    private String userName;
+    private String like;
+    private String comment;
     private String time;
 
-    public HomeModel(int idImage, String title, String person, int like, int comment, String time)
+    public HomeModel(String title, String userName, String like, String comment, String time)
     {
-        this.idImage = idImage;
         this.title = title;
-        this.person = person;
-        this.comment = comment;
+        this.userName = userName;
         this.like = like;
+        this.comment = comment;
         this.time = time;
-    }
-
-    public int getIdImage()
-    {
-        return idImage;
-    }
-
-    public void setIdImage(int idImage)
-    {
-        this.idImage = idImage;
     }
 
     public String getTitle()
@@ -43,32 +32,32 @@ public class HomeModel
         this.title = title;
     }
 
-    public String getPerson()
+    public String getUserName()
     {
-        return person;
+        return userName;
     }
 
-    public void setPerson(String person)
+    public void setUserName(String userName)
     {
-        this.person = person;
+        this.userName = userName;
     }
 
-    public int getLike()
+    public String getLike()
     {
         return like;
     }
 
-    public void setLike(int like)
+    public void setLike(String like)
     {
         this.like = like;
     }
 
-    public int getComment()
+    public String getComment()
     {
         return comment;
     }
 
-    public void setComment(int comment)
+    public void setComment(String comment)
     {
         this.comment = comment;
     }

@@ -236,8 +236,9 @@ public class LoginActivity extends Activity
         {
             if (email.equals(Constant.EMAIL.getValue()) && pass.equals(Constant.PASSWORD.getValue()))
             {
-                Intent intent2 = new Intent(LoginActivity.this, HomeActivity.class);
-                startActivity(intent2);
+//                Intent intent2 = new Intent(LoginActivity.this, HomeActivity.class);
+//                startActivity(intent2);
+                startActivity(new Intent(this, SlidebarActivity.class));
             }
             else
             {
