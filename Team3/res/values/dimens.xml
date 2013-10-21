@@ -45,7 +45,7 @@
     <dimen name="program_bt_PlayOrPause_margin_left">20dp</dimen>
     <dimen name="program_bt_PlayOrPause_margin_top">10dp</dimen>
 
-    <dimen name="program_sbTime_margin_left">10dp</dimen>
+    <dimen name="program_sbTime_margin_left">5dp</dimen>
     <dimen name="program_tvTimeCur_margin_left">20dp</dimen>
     <dimen name="program_sbTime_margin_right">50dp</dimen>
     <dimen name="program_tvTimePlay_margin_left">3dp</dimen>

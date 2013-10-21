@@ -68,10 +68,6 @@
     <string name="program_btDetail">Detail</string>
     <string name="program_btComment">Comments</string>
     <string name="program_detail">Target
-        \n
-        Change the RssReader example so that dynamic fragments are used. A multi-pane
-        layout should be used in case of a large screen, e.g. tablet. The switch point should be 600dp. Implement the
-        solution with only one activity with multiple Fragments, delete the DetailsActivity at the end of this exercise.
     </string>
     <string name="comment_content">Các máy bay trực thăng vận tải đa nhiệm còn tham gia các hoạt động đổ bộ các lực
         lượng đặc nhiệm, trinh sát, yểm trợ hỏa lực đường không trong các cuộc chiến đấu bảo vệ biên giới phía Nam,

@@ -14,7 +14,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity.LoginActivity"/>
-        <!--<activity android:name=".Activity.ProgramFragment"/>-->
+        <activity android:name=".FragmentActivity.CommentFragmentActivity"/>
         <activity android:name=".FragmentActivity.AddCommentFragmentActivity"/>
         <activity android:name=".Activity.SlidebarActivity"
                   android:screenOrientation="portrait"/>

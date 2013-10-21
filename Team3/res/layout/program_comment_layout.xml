@@ -22,12 +22,12 @@
                 android:background="@drawable/comment_box_background"
 
                 >
-            <EditText
+            <TextView
                     android:layout_width="fill_parent"
                     android:background="@null"
                     android:layout_height="fill_parent"
                     android:hint="  Add a comment"
-                    android:id="@+id/comment_etComment" android:layout_marginRight="10dp"
+                    android:id="@+id/comment_tvComment" android:layout_marginRight="10dp"
                     android:layout_marginLeft="5dp"/>
         </LinearLayout>
     </LinearLayout>

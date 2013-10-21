@@ -35,7 +35,7 @@ public class AddCommentFragmentActivity extends FragmentActivity
     {
         comment_btCancel = (Button) findViewById(R.id.comment_btCancel);
         comment_btPost = (Button) findViewById(R.id.comment_btPost);
-        comment_etComment = (EditText) findViewById(R.id.comment_etComment);
+        comment_etComment = (EditText) findViewById(R.id.comment_tvComment);
     }
 
     private final View.OnClickListener onclickListener = new View.OnClickListener()
@@ -46,11 +46,11 @@ public class AddCommentFragmentActivity extends FragmentActivity
             switch (v.getId())
             {
                 case R.id.comment_btCancel:
-                    Intent intentProgram = new Intent(AddCommentFragmentActivity.this, CommentFragment.class);
+                    Intent intentProgram = new Intent(AddCommentFragmentActivity.this, CommentFragmentActivity.class);
                     startActivity(intentProgram);
                     break;
                 case R.id.comment_btPost:
-                    Intent intentProgram_Extra = new Intent(AddCommentFragmentActivity.this, CommentFragment.class);
+                    Intent intentProgram_Extra = new Intent(AddCommentFragmentActivity.this, CommentFragmentActivity.class);
                     String comment = comment_etComment.getText().toString();
                     intentProgram_Extra.putExtra("COMMENT", comment);
                     startActivity(intentProgram_Extra);

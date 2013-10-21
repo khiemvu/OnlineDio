@@ -6,8 +6,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import com.qsoft.OnlineDio.Model.CommentModel;
 import com.qsoft.OnlineDio.R;
 
@@ -18,7 +18,7 @@ import java.util.List;
  * User: khiemvx
  * Date: 10/17/13
  */
-public class CommentFragment extends Fragment
+public class CommentFragmentActivity extends Fragment
 {
     public static final String[] names = new String[]{
             "Khiemvx", "Khiemvx", "Khiemvx", "Khiemvx", "Khiemvx", "Khiemvx"};
@@ -36,7 +36,7 @@ public class CommentFragment extends Fragment
             "a day ago", "a day ago", "a day ago", "a day ago", "a day ago", "a day ago"};
 
 
-    private EditText etComment;
+    private TextView tvComment;
     private ListView listView;
     private List<CommentModel> rowItems;
 
@@ -49,7 +49,7 @@ public class CommentFragment extends Fragment
 
         initComponent(viewer);
 
-        etComment.setOnClickListener(onclickListener);
+        tvComment.setOnClickListener(onclickListener);
 
         //add data into list
         rowItems = new ArrayList<CommentModel>();
@@ -71,7 +71,7 @@ public class CommentFragment extends Fragment
     private void initComponent(View viewer)
     {
         listView = (ListView) viewer.findViewById(R.id.comment_lvCommentList);
-        etComment = (EditText) viewer.findViewById(R.id.comment_etComment);
+        tvComment = (TextView) viewer.findViewById(R.id.comment_tvComment);
     }
 
     private final View.OnClickListener onclickListener = new View.OnClickListener()
@@ -81,7 +81,7 @@ public class CommentFragment extends Fragment
         {
             switch (view.getId())
             {
-                case R.id.comment_etComment:
+                case R.id.comment_tvComment:
                     Intent intent = new Intent(getActivity().getBaseContext(), AddCommentFragmentActivity.class);
                     startActivity(intent);
                     break;
