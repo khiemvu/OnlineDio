@@ -146,6 +146,9 @@ public class ProgramFragment extends Fragment
                     }
                     break;
                 case R.id.program_btBack:
+//                    if (mediaPlayer.isPlaying()){
+//                        mediaPlayer.pause();
+//                    }
                     getFragmentManager().popBackStack();
                     break;
             }
