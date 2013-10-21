@@ -31,6 +31,7 @@ public class ArrayAdapterCustom extends ArrayAdapter<HomeModel>
         super(context, tvResourceId, feeds);
         this.feeds = feeds;
         this.context = context;
+
     }
 
     @Override

@@ -9,7 +9,7 @@
             android:id="@+id/slidebar_ivOption"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/sidebar_image_icon_home2x"/>
+            android:src="@drawable/sidebar_image_icon_home"/>
     <TextView
             android:id="@+id/slidebar_tvOption"
             android:layout_width="wrap_content"

@@ -39,43 +39,43 @@ public class ArrayAdapterListOption extends ArrayAdapter<String>
         if (option.equals("Home"))
         {
             tvOption.setText(option);
-            ivOption.setImageResource(R.drawable.sidebar_image_icon_home2x);
+            ivOption.setImageResource(R.drawable.sidebar_image_icon_home);
         }
         else if (option.equals("Favorite"))
         {
             tvOption.setText(option);
-            ivOption.setImageResource(R.drawable.sidebar_image_icon_favorite2x);
+            ivOption.setImageResource(R.drawable.sidebar_image_icon_favorite);
         }
         else if (option.equals("Following"))
         {
             tvOption.setText(option);
-            ivOption.setImageResource(R.drawable.sidebar_image_icon_favorite2x);
+            ivOption.setImageResource(R.drawable.sidebar_image_icon_favorite);
         }
         else if (option.equals("Audience"))
         {
             tvOption.setText(option);
-            ivOption.setImageResource(R.drawable.sidebar_image_icon_audience2x);
+            ivOption.setImageResource(R.drawable.sidebar_image_icon_audience);
         }
         else if (option.equals("Genres"))
         {
             tvOption.setText(option);
-            ivOption.setImageResource(R.drawable.sidebar_image_icon_genres2x);
+            ivOption.setImageResource(R.drawable.sidebar_image_icon_genres);
         }
         else if (option.equals("Setting"))
         {
             tvOption.setText(option);
-            ivOption.setImageResource(R.drawable.sidebar_image_icon_setting2x);
+            ivOption.setImageResource(R.drawable.sidebar_image_icon_setting);
         }
         else if (option.equals("Help Center"))
         {
             tvOption.setText(option);
             tvSpec.setText("Support");
-            ivOption.setImageResource(R.drawable.sidebar_image_icon_helpcenter2x);
+            ivOption.setImageResource(R.drawable.sidebar_image_icon_helpcenter);
         }
         else
         {
             tvOption.setText(option);
-            ivOption.setImageResource(R.drawable.sidebar_image_icon_logout2x);
+            ivOption.setImageResource(R.drawable.sidebar_image_icon_logout);
         }
         if (!option.equals("Help Center"))
         {

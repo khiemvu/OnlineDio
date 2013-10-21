@@ -11,4 +11,5 @@
     <dimen name="slidebar_userName_text_size">12dp</dimen>
     <dimen name="phone_slidebar_padding">10dp</dimen>
     <dimen name="phone_text_size">16dp</dimen>
+    <dimen name="search_background">40dp</dimen>
 </resources>

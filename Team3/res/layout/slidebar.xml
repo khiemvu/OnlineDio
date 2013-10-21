@@ -28,7 +28,7 @@
             <ImageView
                     android:id="@+id/slidebar_ivTopBar"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/search_background"
                     android:background="@drawable/nav_bar"
                     android:layout_alignParentTop="true"/>
             <EditText
