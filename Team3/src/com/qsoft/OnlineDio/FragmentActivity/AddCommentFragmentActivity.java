@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import com.qsoft.OnlineDio.Fragment.CommentFragmentActivity;
 import com.qsoft.OnlineDio.R;
 
 /**
@@ -46,8 +47,7 @@ public class AddCommentFragmentActivity extends FragmentActivity
             switch (v.getId())
             {
                 case R.id.comment_btCancel:
-                    Intent intentProgram = new Intent(AddCommentFragmentActivity.this, CommentFragmentActivity.class);
-                    startActivity(intentProgram);
+                    finish();
                     break;
                 case R.id.comment_btPost:
                     Intent intentProgram_Extra = new Intent(AddCommentFragmentActivity.this, CommentFragmentActivity.class);

@@ -14,7 +14,7 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.*;
-import com.qsoft.OnlineDio.FragmentActivity.HomeFragment;
+import com.qsoft.OnlineDio.Fragment.HomeFragment;
 import com.qsoft.OnlineDio.R;
 
 import java.util.List;

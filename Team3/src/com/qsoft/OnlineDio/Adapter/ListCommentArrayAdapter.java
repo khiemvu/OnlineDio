@@ -1,4 +1,4 @@
-package com.qsoft.OnlineDio.FragmentActivity;
+package com.qsoft.OnlineDio.Adapter;
 
 import android.app.Activity;
 import android.content.Context;

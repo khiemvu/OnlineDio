@@ -1,4 +1,4 @@
-package com.qsoft.OnlineDio.Activity;
+package com.qsoft.OnlineDio.Fragment;
 
 import android.content.Context;
 import android.media.AudioManager;
@@ -15,9 +15,6 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
-import com.qsoft.OnlineDio.FragmentActivity.CommentFragmentActivity;
-import com.qsoft.OnlineDio.FragmentActivity.DetailFragment;
-import com.qsoft.OnlineDio.FragmentActivity.ThumbnailFragment;
 import com.qsoft.OnlineDio.R;
 
 /**
@@ -53,10 +50,7 @@ public class ProgramFragment extends Fragment
         initComponent(viewer);
         getActivity().setVolumeControlStream(AudioManager.STREAM_MUSIC);
 
-
         getTimeOfRecordAndShow();
-
-
 
         rbtThumnail.setOnClickListener(onclickListener);
         rbtDetail.setOnClickListener(onclickListener);

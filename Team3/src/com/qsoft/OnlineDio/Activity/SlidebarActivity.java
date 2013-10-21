@@ -14,8 +14,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
-import com.qsoft.OnlineDio.Custom.ArrayAdapterListOption;
-import com.qsoft.OnlineDio.FragmentActivity.HomeFragment;
+import com.qsoft.OnlineDio.Adapter.ArrayAdapterListOption;
+import com.qsoft.OnlineDio.Fragment.HomeFragment;
 import com.qsoft.OnlineDio.R;
 
 
@@ -78,7 +78,7 @@ public class SlidebarActivity extends FragmentActivity
             }
         };
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.slidebar_homeFragment, Fragment.instantiate(SlidebarActivity.this, "com.qsoft.OnlineDio.FragmentActivity.HomeFragment"));
+        fragmentTransaction.replace(R.id.slidebar_homeFragment, Fragment.instantiate(SlidebarActivity.this, "com.qsoft.OnlineDio.Fragment.HomeFragment"));
         fragmentTransaction.commit();
         mDrawerLayout.setDrawerListener(mDrawerToggle);
     }

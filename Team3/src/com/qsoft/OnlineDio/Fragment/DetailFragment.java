@@ -1,4 +1,4 @@
-package com.qsoft.OnlineDio.FragmentActivity;
+package com.qsoft.OnlineDio.Fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,12 +11,13 @@ import com.qsoft.OnlineDio.R;
  * User: khiemvx
  * Date: 10/17/13
  */
-public class ThumbnailFragment extends Fragment
+public class DetailFragment extends Fragment
 {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState)
     {
-        return inflater.inflate(R.layout.program_thumbnail_fragment, null);
+        View viewer = (View) inflater.inflate(R.layout.program_detail_fragment, container, false);
+        return viewer;
     }
 }

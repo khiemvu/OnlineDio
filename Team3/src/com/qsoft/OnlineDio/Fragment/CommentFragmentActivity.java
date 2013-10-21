@@ -1,4 +1,4 @@
-package com.qsoft.OnlineDio.FragmentActivity;
+package com.qsoft.OnlineDio.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.TextView;
+import com.qsoft.OnlineDio.FragmentActivity.AddCommentFragmentActivity;
+import com.qsoft.OnlineDio.Adapter.ListCommentArrayAdapter;
 import com.qsoft.OnlineDio.Model.CommentModel;
 import com.qsoft.OnlineDio.R;
 

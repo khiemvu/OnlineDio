@@ -1,4 +1,4 @@
-package com.qsoft.OnlineDio.FragmentActivity;
+package com.qsoft.OnlineDio.Fragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -10,8 +10,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
-import com.qsoft.OnlineDio.Activity.ArrayAdapterCustom;
-import com.qsoft.OnlineDio.Activity.ProgramFragment;
+import com.qsoft.OnlineDio.Adapter.ArrayAdapterCustom;
 import com.qsoft.OnlineDio.Model.HomeModel;
 import com.qsoft.OnlineDio.R;
 

@@ -1,4 +1,4 @@
-package com.qsoft.OnlineDio.Custom;
+package com.qsoft.OnlineDio.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
