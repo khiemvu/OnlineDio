@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import com.qsoft.OnlineDio.Custom.ArrayAdapterSidebarListOption;
 import com.qsoft.OnlineDio.Fragment.HomeFragment;
 import com.qsoft.OnlineDio.R;
@@ -42,6 +43,7 @@ public class SlidebarActivity extends FragmentActivity
     private ListView lvOption;
     private ImageView ivProfile;
     private HomeFragment homeFragment;
+    private RelativeLayout rlLeftDrawer;
 
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -89,7 +91,7 @@ public class SlidebarActivity extends FragmentActivity
         mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
         lvOption = (ListView) findViewById(R.id.slidebar_listOption);
         ivProfile = (ImageView) findViewById(R.id.sidebar_ivProfile);
-
+        rlLeftDrawer = (RelativeLayout) findViewById(R.id.left_drawer);
         homeFragment = new HomeFragment();
     }
 
@@ -104,45 +106,19 @@ public class SlidebarActivity extends FragmentActivity
         @Override
         public void onItemClick(AdapterView<?> adapterView, View view, final int index, long l)
         {
-            mDrawerLayout.setDrawerListener(new DrawerLayout.SimpleDrawerListener()
+            final FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            switch (index)
             {
-                @Override
-                public void onDrawerClosed(View drawerView)
-                {
-                    super.onDrawerClosed(drawerView);
-                    FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                    switch (index)
-                    {
-                        case HOME:
-                            ft.replace(R.id.slidebar_homeFragment, Fragment.instantiate(SlidebarActivity.this, item[HOME]));
-                            break;
-                        case FAVORITE:
-                            ft.replace(R.id.slidebar_homeFragment, Fragment.instantiate(SlidebarActivity.this, item[HOME]));
-                            break;
-                        case FOLLOWING:
-                            ft.replace(R.id.slidebar_homeFragment, Fragment.instantiate(SlidebarActivity.this, item[HOME]));
-                            break;
-                        case AUDIENCE:
-                            ft.replace(R.id.slidebar_homeFragment, Fragment.instantiate(SlidebarActivity.this, item[HOME]));
-                            break;
-                        case GENRES:
-                            ft.replace(R.id.slidebar_homeFragment, Fragment.instantiate(SlidebarActivity.this, item[HOME]));
-                            break;
-                        case SETTING:
-                            ft.replace(R.id.slidebar_homeFragment, Fragment.instantiate(SlidebarActivity.this, item[HOME]));
-                            break;
-                        case HELP_CENTER:
-                            ft.replace(R.id.slidebar_homeFragment, Fragment.instantiate(SlidebarActivity.this, item[HOME]));
-                            break;
-                        case SIGN_OUT:
-                            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-                            break;
-                    }
+                case HOME:
+                    ft.replace(R.id.slidebar_homeFragment, new HomeFragment(), "HomeFragment");
+                    ft.addToBackStack("HomeFragment");
                     ft.commit();
-                }
-            });
-            mDrawerLayout.closeDrawer(lvOption);
-
+                    break;
+                case SIGN_OUT:
+                    startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                    break;
+            }
+            setCloseListOption();
         }
     };
 
@@ -155,8 +131,10 @@ public class SlidebarActivity extends FragmentActivity
             {
                 case R.id.sidebar_ivProfile:
                     showProfile();
+                    setCloseListOption();
                     break;
             }
+
         }
     };
 
@@ -189,5 +167,15 @@ public class SlidebarActivity extends FragmentActivity
     {
         Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.slidebar_profileFragment);
         fragment.onActivityResult(requestCode, resultCode, data);
+    }
+
+    public void setOpenListOption()
+    {
+        mDrawerLayout.openDrawer(rlLeftDrawer);
+    }
+
+    public void setCloseListOption()
+    {
+        mDrawerLayout.closeDrawer(rlLeftDrawer);
     }
 }

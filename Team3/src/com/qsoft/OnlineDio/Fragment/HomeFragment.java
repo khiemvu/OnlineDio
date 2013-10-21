@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import com.qsoft.OnlineDio.Activity.SlidebarActivity;
 import com.qsoft.OnlineDio.Adapter.ArrayAdapterCustom;
 import com.qsoft.OnlineDio.Model.HomeModel;
 import com.qsoft.OnlineDio.R;
@@ -74,7 +75,7 @@ public class HomeFragment extends Fragment
 
     private void showMenu()
     {
-        // do show home_bt_navigate
+        ((SlidebarActivity) getActivity()).setOpenListOption();
     }
 
     private void doShowProgram()
