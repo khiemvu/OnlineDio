@@ -6,6 +6,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.*;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -27,7 +29,7 @@ import java.util.List;
 public class ProfileActivity extends Activity
 {
     ImageView pr_imgAvatar, img;
-    Button btTakePicture, btChoosePicture, btCancel, btGenderSelectLeft, btGenderSelectRight;
+    Button btTakePicture, btChoosePicture, btCancel, btGenderSelectLeft, btGenderSelectRight, pr_btCancel;
 
     EditText pr_edFullName, pr_edPhone, pr_edBirthday, pr_edCountry;
     ImageButton pr_ibDeleteFullName, pr_ibDeletePhone;
@@ -41,6 +43,8 @@ public class ProfileActivity extends Activity
     private static final int CAMERA_REQUEST = 1888;
     public int year, month, day;
     final Context context = this;
+
+    String code;
 
     public void onCreate(Bundle savedInstanceState)
     {
@@ -63,6 +67,7 @@ public class ProfileActivity extends Activity
         btGenderSelectLeft = (Button) findViewById(R.id.pr_btnSelectLeft_check);
         btGenderSelectRight = (Button) findViewById(R.id.pr_btnSelectRight_uncheck);
         pr_rlBackGround = (RelativeLayout) findViewById(R.id.pr_rlBackGround);
+        pr_btCancel = (Button) findViewById(R.id.pr_btCancel);
     }
 
     private void onclickListener()
@@ -75,6 +80,7 @@ public class ProfileActivity extends Activity
         btGenderSelectLeft.setOnClickListener(onclickListener);
         btGenderSelectRight.setOnClickListener(onclickListener);
         pr_rlBackGround.setOnClickListener(onclickListener);
+        pr_btCancel.setOnClickListener(onclickListener);
     }
 
     private final View.OnClickListener onclickListener = new View.OnClickListener()
@@ -85,6 +91,11 @@ public class ProfileActivity extends Activity
             switch (view.getId())
             {
                 case R.id.pr_imgAvatar:
+                    code = "cover_image";
+                    showDialogSelectImage();
+                    break;
+                case R.id.pr_rlBackGround:
+                    code = "background_image";
                     showDialogSelectImage();
                     break;
                 case R.id.pr_edFullName:
@@ -113,10 +124,10 @@ public class ProfileActivity extends Activity
                     break;
                 case R.id.pr_btnSelectRight_uncheck:
                     btGenderSelectLeft.setBackgroundDrawable(getResources().getDrawable(R.drawable.pr_btn_unselect_left));
-                    btGenderSelectRight.setBackgroundDrawable(getResources().getDrawable(R.drawable.pr_btn_select_left));
+                    btGenderSelectRight.setBackgroundDrawable(getResources().getDrawable(R.drawable.pr_btn_select_right));
                     break;
-                case R.id.pr_rlBackGround:
-                    showDialogSelectImage();
+                case R.id.pr_btCancel:
+                    startActivity(new Intent(ProfileActivity.this, SlidebarActivity.class));
                     break;
             }
         }
@@ -259,6 +270,7 @@ public class ProfileActivity extends Activity
             @Override
             public void onClick(View view)
             {
+
                 Intent intent = new Intent();
                 intent.setType("image/*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
@@ -291,8 +303,15 @@ public class ProfileActivity extends Activity
             Bitmap bitmap = (Bitmap) data.getExtras().get("data");
 
             circleBitmap = resizeBitMap(bitmap);
-
-            pr_imgAvatar.setImageBitmap(circleBitmap);
+            if (code.equals("cover_image"))
+            {
+                pr_imgAvatar.setImageBitmap(circleBitmap);
+            }
+            else if (code.equals("background_image"))
+            {
+                Drawable cover = new BitmapDrawable(bitmap);
+                pr_rlBackGround.setBackgroundDrawable(cover);
+            }
 
         }
         if (requestCode == PICK_IMAGE && resultCode == RESULT_OK && data != null)
@@ -308,7 +327,15 @@ public class ProfileActivity extends Activity
 
             Bitmap bmp = BitmapFactory.decodeFile(filePath);
             circleBitmap = resizeBitMap(bmp);
-            pr_imgAvatar.setImageBitmap(circleBitmap);
+            if (code.equals("cover_image"))
+            {
+                pr_imgAvatar.setImageBitmap(circleBitmap);
+            }
+            else if (code.equals("background_image"))
+            {
+                Drawable cover = new BitmapDrawable(bmp);
+                pr_rlBackGround.setBackgroundDrawable(cover);
+            }
 
         }
         alertDialog.cancel();

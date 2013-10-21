@@ -67,6 +67,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/name_song"
                     android:textSize="@dimen/slidebar_title_text_size"
+                    android:textColor="@color/Black"
                     android:textStyle="bold"
                     />
             <TextView
@@ -75,7 +76,9 @@
                     android:layout_height="wrap_content"
                     android:text="@string/name_singer"
                     android:textSize="@dimen/slidebar_userName_text_size"
-                    android:layout_below="@id/slidebar_tvSong"/>
+                    android:layout_below="@id/slidebar_tvSong"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"/>
             <ImageView
                     android:id="@+id/slide_ivNextEditProfile"
                     android:layout_width="wrap_content"
@@ -85,10 +88,10 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"/>
             <ImageView
-                    android:id="@+id/slide_ivEditProfile"
+                    android:id="@+id/sidebar_ivProfile"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/slidebar_profile"
+                    android:background="@drawable/sidebar_image_setting"
                     android:layout_toLeftOf="@id/slide_ivNextEditProfile"
                     android:layout_centerVertical="true"/>
 

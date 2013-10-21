@@ -41,6 +41,7 @@ public class ProgramFragment extends Fragment
     private Button btPlayOrStop;
     private TextView tvTimeCur;
     private TextView tvTimePlay;
+    private Button btBack;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -56,6 +57,7 @@ public class ProgramFragment extends Fragment
         rbtDetail.setOnClickListener(onclickListener);
         rbtComment.setOnClickListener(onclickListener);
         btPlayOrStop.setOnClickListener(onclickListener);
+        btBack.setOnClickListener(onclickListener);
 
         sbVolume.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener()
         {
@@ -75,17 +77,25 @@ public class ProgramFragment extends Fragment
             {
             }
         });
-        sbTime.setOnTouchListener(new View.OnTouchListener() {@Override public boolean onTouch(View v, MotionEvent event) {
-            seekChange(v);
-            return false; }
+        sbTime.setOnTouchListener(new View.OnTouchListener()
+        {
+            @Override
+            public boolean onTouch(View v, MotionEvent event)
+            {
+                seekChange(v);
+                return false;
+            }
         });
 
         return viewer;
     }
+
     // This is event handler thumb moving event
-    private void seekChange(View v){
-        if(mediaPlayer.isPlaying()){
-            SeekBar sb = (SeekBar)v;
+    private void seekChange(View v)
+    {
+        if (mediaPlayer.isPlaying())
+        {
+            SeekBar sb = (SeekBar) v;
             mediaPlayer.seekTo(sb.getProgress());
         }
     }
@@ -116,41 +126,60 @@ public class ProgramFragment extends Fragment
                     transactionComment.commit();
                     break;
                 case R.id.program_btPlayOrStop:
-                    if (!mediaPlayer.isPlaying()) {
+                    if (!mediaPlayer.isPlaying())
+                    {
                         btPlayOrStop.setBackgroundDrawable(getResources().getDrawable(R.drawable.content_bt_play));
-                        try{
+                        try
+                        {
                             mediaPlayer.start();
                             startPlayProgressUpdater();
-                        }catch (IllegalStateException e) {
+                        }
+                        catch (IllegalStateException e)
+                        {
                             mediaPlayer.pause();
                         }
-                    }else {
+                    }
+                    else
+                    {
                         mediaPlayer.pause();
                         btPlayOrStop.setBackgroundDrawable(getResources().getDrawable(R.drawable.content_bt_pause));
                     }
+                    break;
+                case R.id.program_btBack:
+                    getFragmentManager().popBackStack();
                     break;
             }
         }
     };
 
-    public void startPlayProgressUpdater() {
+    public void startPlayProgressUpdater()
+    {
         getTimeOfRecordAndShow();
         sbTime.setProgress(mediaPosition);
         sbTime.setMax(mediaDuration);
-        if (mediaPlayer.isPlaying()) {
-            Runnable notification = new Runnable() {
-                public void run() {
+        if (mediaPlayer.isPlaying())
+        {
+            Runnable notification = new Runnable()
+            {
+                public void run()
+                {
                     startPlayProgressUpdater();
                 }
             };
-            handler.postDelayed(notification,1000);
-        }else{
+            handler.postDelayed(notification, 1000);
+        }
+        else
+        {
             mediaPlayer.pause();
             btPlayOrStop.setBackgroundDrawable(getResources().getDrawable(R.drawable.content_bt_pause));
-            if(mediaPosition == mediaDuration)
+            if (mediaPosition == mediaDuration)
+            {
                 sbTime.setProgress(0);
+            }
             else
+            {
                 sbTime.setProgress(mediaPosition);
+            }
         }
     }
 
@@ -163,7 +192,8 @@ public class ProgramFragment extends Fragment
         tvTimePlay.setText(getTimeString(mediaDuration));
     }
 
-    private String getTimeString(long millis) {
+    private String getTimeString(long millis)
+    {
         StringBuffer buf = new StringBuffer();
 
         //int hours = (int) (millis / (1000 * 60 * 60));
@@ -179,6 +209,7 @@ public class ProgramFragment extends Fragment
 
         return buf.toString();
     }
+
     private void initComponent(View viewer)
     {
         //Return the handle to a system-level service - 'AUDIO'.
@@ -190,9 +221,9 @@ public class ProgramFragment extends Fragment
 
         //init seekbar time
         mediaPlayer = MediaPlayer.create(getActivity(), R.raw.testsong_20_sec);
-        sbTime = (SeekBar)viewer.findViewById(R.id.program_sbTime);
+        sbTime = (SeekBar) viewer.findViewById(R.id.program_sbTime);
 
-        btPlayOrStop = (Button)viewer.findViewById(R.id.program_btPlayOrStop);
+        btPlayOrStop = (Button) viewer.findViewById(R.id.program_btPlayOrStop);
 
         tvTimeCur = (TextView) viewer.findViewById(R.id.program_tvTimeCur);
         tvTimePlay = (TextView) viewer.findViewById(R.id.program_tvTimePlay);
@@ -202,6 +233,7 @@ public class ProgramFragment extends Fragment
         btLike = (Button) viewer.findViewById(R.id.program_btLike);
         btList = (Button) viewer.findViewById(R.id.program_btList);
         rbtComment = (RadioButton) viewer.findViewById(R.id.program_rbtComment);
+        btBack = (Button) viewer.findViewById(R.id.program_btBack);
     }
 
 }

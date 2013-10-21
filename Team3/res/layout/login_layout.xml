@@ -16,7 +16,7 @@
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/btBack" android:layout_alignParentLeft="true"
+                android:id="@+id/login_btBack" android:layout_alignParentLeft="true"
                 android:layout_margin="@dimen/title_bt_margin_all"
                 android:background="@drawable/login_bt_back"
                 />

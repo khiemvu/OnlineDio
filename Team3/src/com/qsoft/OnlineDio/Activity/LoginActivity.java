@@ -125,7 +125,7 @@ public class LoginActivity extends Activity
     {
         etEmail = (EditText) findViewById(R.id.etEmail);
         etPass = (EditText) findViewById(R.id.etPass);
-        btBack = (Button) findViewById(R.id.btBack);
+        btBack = (Button) findViewById(R.id.login_btBack);
         btLogin = (Button) findViewById(R.id.login_btLogin);
         tvResetPas = (TextView) findViewById(R.id.tvResetPass);
         ibtDelEmail = (ImageButton) findViewById(R.id.ibtDelEmail);
@@ -150,19 +150,19 @@ public class LoginActivity extends Activity
         {
             switch (view.getId())
             {
-                case R.id.btBack:
+                case R.id.login_btBack:
                     Intent intentBack = new Intent(LoginActivity.this, FirstLaunchActivity.class);
                     startActivity(intentBack);
                     break;
                 case R.id.login_btLogin:
-                    if (!checkNetwork())
-                    {
-                        break;
-                    }
-                    else
-                    {
-                        checkLogin();
-                    }
+//                    if (!checkNetwork())
+//                    {
+//                        break;
+//                    }
+//                    else
+//                    {
+                    checkLogin();
+                    //   }
                     break;
                 case R.id.tvResetPass:
                     resetPassWord();
@@ -236,8 +236,6 @@ public class LoginActivity extends Activity
         {
             if (email.equals(Constant.EMAIL.getValue()) && pass.equals(Constant.PASSWORD.getValue()))
             {
-//                Intent intent2 = new Intent(LoginActivity.this, HomeActivity.class);
-//                startActivity(intent2);
                 startActivity(new Intent(this, SlidebarActivity.class));
             }
             else

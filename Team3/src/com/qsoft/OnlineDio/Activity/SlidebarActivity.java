@@ -14,7 +14,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
-import com.qsoft.OnlineDio.Adapter.ArrayAdapterListOption;
+import com.qsoft.OnlineDio.Custom.ArrayAdapterSidebarListOption;
 import com.qsoft.OnlineDio.Fragment.HomeFragment;
 import com.qsoft.OnlineDio.R;
 
@@ -88,15 +88,15 @@ public class SlidebarActivity extends FragmentActivity
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
         lvOption = (ListView) findViewById(R.id.slidebar_listOption);
-        ivProfile = (ImageView) findViewById(R.id.slide_ivEditProfile);
+        ivProfile = (ImageView) findViewById(R.id.sidebar_ivProfile);
 
         homeFragment = new HomeFragment();
     }
 
     private void setUpListenerController()
     {
-        ivProfile.setOnClickListener(onClickListener);
         lvOption.setOnItemClickListener(onItemClickListener);
+        ivProfile.setOnClickListener(onClickListener);
     }
 
     private final ListView.OnItemClickListener onItemClickListener = new AdapterView.OnItemClickListener()
@@ -141,7 +141,8 @@ public class SlidebarActivity extends FragmentActivity
                     ft.commit();
                 }
             });
-//            mDrawerLayout.closeDrawer(lvOption);
+            mDrawerLayout.closeDrawer(lvOption);
+
         }
     };
 
@@ -152,24 +153,21 @@ public class SlidebarActivity extends FragmentActivity
         {
             switch (view.getId())
             {
-                case R.id.slide_ivEditProfile:
-                    doEditProfile();
+                case R.id.sidebar_ivProfile:
+                    showProfile();
                     break;
             }
         }
     };
 
-    private void doEditProfile()
+    private void showProfile()
     {
-//        final FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-//        ft.replace(R.id.slidebar_profileFragment, new ProfileActivity(), "ProfileActivity");
-//        ft.addToBackStack("ProfileActivity");
-//        ft.commit();
+        startActivity(new Intent(this, ProfileActivity.class));
     }
 
     private void setUpDataListOption(Context context)
     {
-        lvOption.setAdapter(new ArrayAdapterListOption(context, R.layout.slidebar_listoptions, listOptionName));
+        lvOption.setAdapter(new ArrayAdapterSidebarListOption(context, R.layout.slidebar_listoptions, listOptionName));
     }
 
     @Override

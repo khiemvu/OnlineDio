@@ -89,7 +89,7 @@
                     android:id="@+id/slide_ivEditProfile"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/slidebar_profile"
+                    android:background="@drawable/sidebar_image_icon_setting"
                     android:layout_toLeftOf="@id/slide_ivNextEditProfile"
                     android:layout_centerVertical="true"/>
 

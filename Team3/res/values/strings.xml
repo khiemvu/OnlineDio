@@ -20,21 +20,7 @@
     </string>
     <string name="reset">Reset</string>
     <string name="cancel">Cancel</string>
-    <string name="ns_menu_main_header"></string>
 
-    <string name="ns_menu_snippet1">Home</string>
-    <string name="ns_menu_snippet2">Favorite</string>
-    <string name="ns_menu_snippet3">Following</string>
-    <string name="ns_menu_snippet4">Audience</string>
-    <string name="ns_menu_snippet5">Genres</string>
-    <string name="ns_menu_snippet6">Setting</string>
-    <string name="ns_menu_snippet7">Help Center</string>
-    <string name="ns_menu_snippet8">Singout</string>
-
-    <string name="my_station_title">
-        <b>My Station</b>
-    </string>
-    <string name="my_station_name">Mr.Bean Aloha</string>
 
     <string name="pr_lblTitle">Profile setup</string>
     <string name="pr_lblProfile">Profile</string>
@@ -85,5 +71,6 @@
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
     <string name="slidebar_tittle_item">Item</string>
-
+    <string name="name_song">My Station</string>
+    <string name="name_singer">Mr.Bean Aloha</string>
 </resources>
