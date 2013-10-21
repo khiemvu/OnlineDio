@@ -3,15 +3,11 @@
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
-    <ScrollView
+    <ImageView
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:id="@+id/scrollView">
-        <ImageView
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:id="@+id/program_ivThumnail"
-                android:src="@drawable/content_image_detail"
-                />
-    </ScrollView>
+            android:id="@+id/program_ivThumnail"
+            android:background="@drawable/content_image_thumnail_background"
+            android:src="@drawable/content_image_detail"
+            />
 </LinearLayout>

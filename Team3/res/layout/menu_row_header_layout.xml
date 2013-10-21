@@ -5,11 +5,12 @@
         android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
     <RelativeLayout
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" android:background="@drawable/nav_bar" android:paddingBottom="7dp">
+            android:layout_height="wrap_content" android:background="@drawable/nav_bar" android:paddingBottom="7dp"
+            android:layout_gravity="bottom">
         <EditText
                 android:id="@+id/sideBar_header_edSearch"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:gravity="center_vertical"
                 android:singleLine="true"
                 android:textAllCaps="true"
@@ -31,8 +32,8 @@
     <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
                     android:id="@+id/myStationReLayout"
                     android:background="@color/program_backgroud">
-        <ImageView android:id="@+id/sideBar_header_avatar" android:layout_width="wrap_content"
-                   android:layout_height="wrap_content" android:layout_alignParentLeft="true"
+        <ImageView android:id="@+id/sideBar_header_avatar" android:layout_width="100dp"
+                   android:layout_height="100dp" android:layout_alignParentLeft="true"
                    android:layout_marginLeft="10dp" android:gravity="center"
                    android:src="@drawable/content_image2x"/>
         <TextView android:id="@+id/sideBar_header_title"

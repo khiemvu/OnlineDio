@@ -6,25 +6,34 @@
     <LinearLayout
             android:orientation="horizontal"
             android:layout_width="fill_parent"
+
+
             android:layout_height="wrap_content">
         <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/content_comment_image"
-                android:id="@+id/comment_ivAvatar"/>
-        <EditText
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/content_comment_image"
+                android:background="@drawable/comment_image_item_background"
+                android:id="@+id/comment_ivAvatar" android:layout_marginLeft="10dp"/>
+        <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/comment_content_hint"
-                android:id="@+id/comment_etComment" android:layout_marginLeft="10dp"/>
+                android:background="@drawable/comment_box_background"
+
+                >
+            <EditText
+                    android:layout_width="fill_parent"
+                    android:background="@null"
+                    android:layout_height="fill_parent"
+                    android:hint="  Add a comment"
+                    android:id="@+id/comment_etComment" android:layout_marginRight="10dp"
+                    android:layout_marginLeft="5dp"/>
+        </LinearLayout>
     </LinearLayout>
-    <ScrollView
+    <ListView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/scrollView">
-        <ListView
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:id="@+id/comment_lvCommentList"/>
-    </ScrollView>
+            android:id="@+id/comment_lvCommentList" android:layout_marginRight="10dp" android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"/>
 </LinearLayout>

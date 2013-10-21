@@ -22,8 +22,13 @@ public class CommentFragmentActivity extends Fragment
 {
     public static final String[] names = new String[]{
             "Khiemvx", "Khiemvx", "Khiemvx", "Khiemvx", "Khiemvx", "Khiemvx"};
-    public static final String[] comments = new String[]{"Test comment", "Test comment",
-            "Test comment", "Test comment", "Test comment", "Test comment",};
+    public static final String[] comments = new String[]{
+            "Báo chí Trung Quốc cho biết cuộc tập trận quy mô Parmenion 2013 của quân đội Hy Lạp được tiến hành cả trên bộ lẫn trên biển, sau màn phô diễn sức mạnh trên bộ vào đầu tháng 10 giờ đây tới lượt lực lượng hải quân của nước này được lệnh điều động thao diễn.",
+            "Báo chí Trung Quốc cho biết cuộc tập trận quy mô Parmenion 2013 của quân đội Hy Lạp được tiến hành cả trên bộ lẫn trên biển, sau màn phô diễn sức mạnh trên bộ vào đầu tháng 10 giờ đây tới lượt lực lượng hải quân của nước này được lệnh điều động thao diễn.",
+            "Báo chí Trung Quốc cho biết cuộc tập trận quy mô Parmenion 2013 của quân đội Hy Lạp được tiến hành cả trên bộ lẫn trên biển, sau màn phô diễn sức mạnh trên bộ vào đầu tháng 10 giờ đây tới lượt lực lượng hải quân của nước này được lệnh điều động thao diễn.",
+            "Báo chí Trung Quốc cho biết cuộc tập trận quy mô Parmenion 2013 của quân đội Hy Lạp được tiến hành cả trên bộ lẫn trên biển, sau màn phô diễn sức mạnh trên bộ vào đầu tháng 10 giờ đây tới lượt lực lượng hải quân của nước này được lệnh điều động thao diễn.",
+            "Báo chí Trung Quốc cho biết cuộc tập trận quy mô Parmenion 2013 của quân đội Hy Lạp được tiến hành cả trên bộ lẫn trên biển, sau màn phô diễn sức mạnh trên bộ vào đầu tháng 10 giờ đây tới lượt lực lượng hải quân của nước này được lệnh điều động thao diễn.",
+            "Báo chí Trung Quốc cho biết cuộc tập trận quy mô Parmenion 2013 của quân đội Hy Lạp được tiến hành cả trên bộ lẫn trên biển, sau màn phô diễn sức mạnh trên bộ vào đầu tháng 10 giờ đây tới lượt lực lượng hải quân của nước này được lệnh điều động thao diễn.",};
     public static final Integer[] images = new Integer[]{R.drawable.content_comment_image, R.drawable.content_comment_image,
             R.drawable.content_comment_image, R.drawable.content_comment_image,
             R.drawable.content_comment_image, R.drawable.content_comment_image,};
@@ -55,6 +60,9 @@ public class CommentFragmentActivity extends Fragment
         }
         ListCommentArrayAdapter adapter = new ListCommentArrayAdapter(getActivity(),
                 R.layout.program_comment_item_layout, rowItems);
+
+        //TODO add data of addCommentFragmentActivity into Listview
+
         listView.setAdapter(adapter);
 
         return viewer;
