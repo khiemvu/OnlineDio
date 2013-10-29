@@ -1,4 +1,4 @@
-package com.qsoft.OnlineDio.FragmentActivity;
+package com.qsoft.OnlineDio.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,7 +6,6 @@ import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import com.qsoft.OnlineDio.Fragment.CommentFragmentActivity;
 import com.qsoft.OnlineDio.R;
 
 /**

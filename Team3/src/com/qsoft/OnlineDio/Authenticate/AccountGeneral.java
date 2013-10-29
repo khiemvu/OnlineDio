@@ -12,7 +12,7 @@ public class AccountGeneral
     /**
      * Account type id
      */
-    public static final String ACCOUNT_TYPE = "com.qsoft.onlineDio";
+    public static final String ACCOUNT_TYPE = "com.qsoft.OnlineDio";
 
     /**
      * Account name

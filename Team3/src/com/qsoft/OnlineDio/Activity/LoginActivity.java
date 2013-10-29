@@ -168,16 +168,16 @@ public class LoginActivity extends AccountAuthenticatorActivity
     };
 
 
-//    private void getEmailAndPassword()
-//    {
-//        email = etEmail.getText().toString();
-//        pass = etPass.getText().toString();
-//        if (!email.equals(" ") && !pass.equals(" "))
-//        {
-//            btLogin.setEnabled(true);
-//            btLogin.setClickable(true);
-//        }
-//    }
+    private void getEmailAndPassword()
+    {
+        email = etEmail.getText().toString();
+        pass = etPass.getText().toString();
+        if (!email.equals(" ") && !pass.equals(" "))
+        {
+            btLogin.setEnabled(true);
+            btLogin.setClickable(true);
+        }
+    }
 
     private final View.OnClickListener onclickListener = new View.OnClickListener()
     {
@@ -191,14 +191,14 @@ public class LoginActivity extends AccountAuthenticatorActivity
                     startActivity(intentBack);
                     break;
                 case R.id.login_btLogin:
-//                    if (!checkNetwork())
-//                    {
-//                        break;
-//                    }
-//                    else
-//                    {
+                    if (!checkNetwork())
+                    {
+                        break;
+                    }
+                    else
+                    {
                     checkLogin();
-//                    }
+                    }
                     break;
                 case R.id.tvResetPass:
                     resetPassWord();

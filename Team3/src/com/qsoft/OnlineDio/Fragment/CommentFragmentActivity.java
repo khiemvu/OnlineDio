@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.TextView;
-import com.qsoft.OnlineDio.FragmentActivity.AddCommentFragmentActivity;
 import com.qsoft.OnlineDio.Adapter.ListCommentArrayAdapter;
 import com.qsoft.OnlineDio.Model.CommentModel;
 import com.qsoft.OnlineDio.R;

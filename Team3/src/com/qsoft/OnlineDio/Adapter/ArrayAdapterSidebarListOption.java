@@ -1,6 +1,7 @@
 package com.qsoft.OnlineDio.Adapter;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,14 +10,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import com.qsoft.OnlineDio.R;
 
-public class ArrayAdapterListOption extends ArrayAdapter<String>
+public class ArrayAdapterSidebarListOption extends ArrayAdapter<String>
 {
     private String[] slideBarOptions;
     private Context context;
     private TextView tvOption, tvSpec;
     private ImageView ivOption;
 
-    public ArrayAdapterListOption(Context context, int textViewResourceId, String[] slideBarOptions)
+    public ArrayAdapterSidebarListOption(Context context, int textViewResourceId, String[] slideBarOptions)
     {
         super(context, textViewResourceId, slideBarOptions);
         this.slideBarOptions = slideBarOptions;
@@ -38,17 +39,14 @@ public class ArrayAdapterListOption extends ArrayAdapter<String>
         String option = slideBarOptions[position];
         if (option.equals("Home"))
         {
-            tvOption.setText(option);
             ivOption.setImageResource(R.drawable.sidebar_image_icon_home);
         }
         else if (option.equals("Favorite"))
         {
-            tvOption.setText(option);
             ivOption.setImageResource(R.drawable.sidebar_image_icon_favorite);
         }
         else if (option.equals("Following"))
         {
-            tvOption.setText(option);
             ivOption.setImageResource(R.drawable.sidebar_image_icon_favorite);
         }
         else if (option.equals("Audience"))
@@ -58,29 +56,28 @@ public class ArrayAdapterListOption extends ArrayAdapter<String>
         }
         else if (option.equals("Genres"))
         {
-            tvOption.setText(option);
             ivOption.setImageResource(R.drawable.sidebar_image_icon_genres);
         }
         else if (option.equals("Setting"))
         {
-            tvOption.setText(option);
             ivOption.setImageResource(R.drawable.sidebar_image_icon_setting);
         }
         else if (option.equals("Help Center"))
         {
-            tvOption.setText(option);
             tvSpec.setText("Support");
             ivOption.setImageResource(R.drawable.sidebar_image_icon_helpcenter);
         }
         else
         {
-            tvOption.setText(option);
             ivOption.setImageResource(R.drawable.sidebar_image_icon_logout);
         }
         if (!option.equals("Help Center"))
         {
             tvSpec.setText("");
         }
+        tvOption.setText(option);
+        tvOption.setTypeface(null, Typeface.BOLD);
+        tvOption.setTextColor(R.color.Black);
         return v;
     }
 
